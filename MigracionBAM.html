@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOM</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Dark-NavBar.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="index.html">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-icon-180x180.png">
+    <link rel="manifest" href="/assets/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        input:invalid {
+            border: 1px solid red;
+        }
+
+        input:valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+             <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+                style="height:80px;background-color:#351a51;color:#ffffff;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="color:#ffffff;" href="index.html">
+                        <img src="assets/img/WOM_logo.png" style="max-width: 70px;">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span
+                            class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link active"
+                                    style="color:#ffffff;"><img src="assets/img/WhatsApp_icon.png" style="max-width:27px;"></i>&nbsp;Whatsapp corporativo +56935788140 </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"
+                                    style="color:#ffffff;"><i class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+<!-- Formulario con datos del cliente-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h3 class="text-center" style="color: #351a51">MIGRACIÓN PREPAGO A POSTPAGO BAM</h3>
+                    <br>
+<div class="row">
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtNombreCliente">Nombre completo cliente:</label>
+        <input type="text" required class="form-control" id="txtNombreCliente"
+            aria-describedby="nombreHelp" placeholder="Juanito Andrés Perez Rosales" maxlength="80" minlength="10">
+        </div>
+</div>
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtRutCliente">Rut cliente:</label>
+
+		<div class="row">
+			<div class="col-sm-9">
+					<input type="text" required class="form-control" id="txtRutCliente1"
+					aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
+			</div> 
+			<div class="col-sm-1">-</div> 
+			<div class="col-sm-2">
+					<input type="text" required class="form-control" id="txtRutCliente2"
+					aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
+			</div>
+		</div>
+
+
+    </div>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="txtTelefonoContacto1">Número de contacto:</label>
+            <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">+56</div>
+                    </div>
+            <input required type="tel" class="form-control" id="txtTelefonoContacto1"
+                aria-describedby="numberContact1Help" maxlength="9" placeholder="987654321">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="txtTelefonoBAM">Número BAM a migrar:</label>
+            <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">+56</div>
+                    </div>
+            <input required type="tel" class="form-control" id="txtTelefonoBAM"
+                aria-describedby="numberBAM" maxlength="9" placeholder="987654321">
+                </div>
+        </div>
+    </div>
+</div>
+    
+
+<!-- Planes-->
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div id="1line" class="form-group">
+            <label for="SelectPlan">Planes BAM a contratar:</label>
+            <select class="form-control" id="SelectPlan" aria-describedby="PlanHelp">
+                        <option selected disabled value="">Seleccione plan a contratar</option>
+                        <option
+                            value="BAM 20 Gigas">
+                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                        <option
+                            value="BAM 40 Gigas">
+                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                        <option
+                            value="BAM 60 Gigas">
+                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                        <option
+                            value="BAM 90 Gigas">
+                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                        <option
+                            value="BAM 120 Gigas">
+                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+            </select>
+        </div>
+    </div>
+	<div class="col-sm-6">
+        <div id="1line" class="form-group">
+            <label for="SelectPlan">Ciclo de facturación:</label>
+            <select class="form-control" id="SelectCiclo" aria-describedby="PlanHelp">
+                        <option selected disabled value="">Seleccione ciclo de facturación</option>
+                        <option
+                            value="2">
+                            Ciclo 2 - Inicia 16, termina el 15 y paga el 5</option>
+                        <option
+                            value="3">
+                            Ciclo 3 - Inicia 26, termina el 25 y paga el 15</option>
+                        <option
+                            value="6">
+                            Ciclo 6 - Inicia 1, termina el 31 y paga el 20</option>
+                        <option
+                            value="7">
+                            Ciclo 7 - Inicia 7, termina el 6 y paga el 1</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<!-- Boton ENVIAR-->
+
+
+<br>
+<div class="text-center">
+    <a class="btn btn-success btn-lg" onclick="changeLabel()">Generar Script</a>
+</div>
+
+
+<!-- Texto al cliente -->
+
+</div>
+<script type="text/javascript">
+    function changeLabel() {
+        var intro = "Te recuerdo que por tu seguridad esta llamada está siendo grabada y es la constancia de la contratación de los servicios. Puedes acceder a una copia a través de nuestro servicio de atención al cliente llamando al 103 o en las tiendas de WOM en donde quedará almacenada, junto a cualquier modificación a tu contrato de servicios.";
+
+        var nombre = document.getElementById('txtNombreCliente').value;
+        var rutCli = document.getElementById('txtRutCliente1').value +"-"+ document.getElementById('txtRutCliente2').value;
+		var NumeroContacto1="+56"+document.getElementById('txtTelefonoContacto1').value;
+        var NumeroBAM= "+56"+document.getElementById('txtTelefonoBAM').value;
+        var plan = document.getElementById('SelectPlan').value;
+		var ciclo = document.getElementById('SelectCiclo').value;
+
+        var mensaje = intro+ "<br/> <br/>Te cuento que ahora validaremos tus datos personales: <br/> Tu nombre completo es: <strong>" + nombre +"</strong>, tu rut es: <strong>"+rutCli+
+        "</strong>, tu número de contacto es: <strong>"+ NumeroContacto1+"</strong>, y contratas el plan <strong>"+plan+"</strong>, con el número prepago <strong>"+NumeroBAM+"</strong>.<br/>";
+        
+        var confirmacion=" Confirmas que según la oferta acordada aceptas contratar nuestro";
+		var condiciones = " La velocidad máxima descarga es de 2 Mbps en red 3G y 20 Mbps en 4G, y subida es 512 Kbps en red 3G y 5 Mbps en 4G. Al superar tu consumo dentro de un mismo periodo de facturación,  tu velocidad se reduce a 32 kbps de descarga y subida. Por lo que sigues navegando. En caso de usar todos tus gigas,  puedes comprar bolsas de datos para aumentar la velocidad.<br>Y siempre queremos entregarte más… Los gigas de tu plan de Internet móvil que no has utilizado durante el mes, se cargarán al mes siguiente para que los utilices de primero, antes de consumir los gigas de tu plan mensual. Sin embargo, si aún te quedan esos mismos gigas, no se acumularán al mes subsiguiente.<br>";
+        var documentos = " Además, enviarás al whatsapp corporativo +56935788140 la foto legible de tu Cédula de Identidad por ambos lados para proseguir con tu venta. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al whatsapp que te indique. Considerar que sin este documento, tu contratación no se realizará. Te informo que en un plazo máximo de 72 horas hábiles desde que nos envíes su CI se realizará la activación del plan ofrecido.<br>";
+		var planDescrip = "";
+		
+		switch (plan){
+			case "BAM 20 Gigas":
+				planDescrip= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo es de $9.990.";
+				break;			
+			case "BAM 40 Gigas":
+				planDescrip= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+				break;	
+			case "BAM 60 Gigas":
+				planDescrip= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+				break;
+			case "BAM 90 Gigas":
+				planDescrip= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+				break;
+			default:
+				planDescrip= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+			}
+		
+		var cicloDescrip="";
+		switch (ciclo){
+			case "2":
+				cicloDescrip= " Tu ciclo de facturación será desde el día 16 del mes al 15 del mes siguiente, con fecha de vencimiento el 05 del mes. <br><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong>";
+				break;			
+			case "3":
+				cicloDescrip= " Tu ciclo de facturación será desde el día 26 del mes al 25 del mes siguiente, con fecha de vencimiento el 15 del mes. <br><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong>";
+				break;	
+			case "6":
+				cicloDescrip= " Tu ciclo de facturación será desde el día 1 del mes al 31 del mes siguiente, con fecha de vencimiento el 20 del mes. <br><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong>";
+				break;
+			case  "7":
+				cicloDescrip= " Tu ciclo de facturación será desde el día 7 del mes al 6 del mes siguiente, con fecha de vencimiento el 01 del mes. <br><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong>";
+			}
+		
+		mensaje= mensaje+confirmacion+planDescrip+condiciones+documentos+cicloDescrip;
+		
+		
+		
+        document.getElementById('txtRespuesta').innerHTML = mensaje;
+    } 
+</script>
+
+
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+
+<!-- Titulo Comunicado al cliente-->
+
+<div class="highlight-blue" style="background-color: #351a51">
+    
+        <div class="container text-justify">
+            <h2 class="text-center">Comunicado al cliente:</h2>
+            <p align="justify" id="txtRespuesta">Contrato de venta a leer por el ejecutivo...</p>
+
+ <!-- Boton Borrar Script-->           
+        <a class="btn btn-warning" onclick="clearAll()">Borrar Script</a>
+        </div>
+        
+   
+</div>
+
+<script>
+function clearAll(){
+document.getElementById("txtRespuesta").innerHTML="";
+}
+</script>
+
+
+
+</form>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<div>
+<br><br>
+<div class="text-center"> <a href="https://forms.gle/iV831uk1XRwNGjbw7" target="_blank"><h7><b>DEJANOS TUS COMENTARIOS AQUÍ<h7></b></a></div><br>
+<div class="text-center" style="color: #351a51">
+<h8>Designed by IT Chile - ApexAmerica<h8>
+</div>  
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOM</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Dark-NavBar.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="index.html">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-icon-180x180.png">
+    <link rel="manifest" href="/assets/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        input:invalid {
+            border: 1px solid red;
+        }
+
+        input:valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+             <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+                style="height:80px;background-color:#351a51;color:#ffffff;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="color:#ffffff;" href="index.html">
+                        <img src="assets/img/WOM_logo.png" style="max-width: 70px;">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span
+                            class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link active"
+                                    style="color:#ffffff;"><img src="assets/img/WhatsApp_icon.png" style="max-width:27px;"></i>&nbsp;Whatsapp corporativo +56935788140 </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"
+                                    style="color:#ffffff;"><i class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+<!-- Formulario con datos del cliente-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h3 class="text-center" style="color: #351a51">LÍNEA ADICIONAL BAM</h3>
+                    <br>
+<div class="row">
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtNombreCliente">Nombre completo cliente:</label>
+        <input type="text" required class="form-control" id="txtNombreCliente"
+            aria-describedby="nombreHelp" placeholder="Juanito Andrés Perez Rosales" maxlength="80" minlength="10">
+        <small id="nombreHelp" class="form-text text-muted">Nombre completo del cliente</small>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtRutCliente">Rut cliente:</label>
+
+<div class="row">
+    <div class="col-sm-9">
+            <input type="text" required class="form-control" id="txtRutCliente1"
+            aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
+    </div> 
+    <div class="col-sm-1">-</div> 
+    <div class="col-sm-2">
+            <input type="text" required class="form-control" id="txtRutCliente2"
+            aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
+    </div>
+</div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="txtTelefonoContacto1">Número de contacto 1:</label>
+            <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">+56</div>
+                    </div>
+            <input required type="tel" class="form-control" id="txtTelefonoContacto1"
+                aria-describedby="numberContact1Help" maxlength="9" placeholder="987654321">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="txtTelefonoContacto2">Número de contacto 2:</label>
+            <input type="tel" class="form-control" id="txtTelefonoContacto2"
+                aria-describedby="numberContact2Help" maxlength="9" placeholder="987654321 ó 712310134">
+				 <small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
+        </div>
+    </div>
+	<div class="col-sm-4">
+		<div class="form-group">
+			<label for="txtCorreoCli">Correo electronico del cliente</label>
+			<input required type="email" class="form-control" id="txtCorreoCli" aria-describedby="CorreoClitHelp" minlength="10"
+				placeholder="correo@receptor.com">
+			<small id="CorreoClitHelp" class="form-text text-muted">Correo electronico del cliente solicitante.</small>
+		</div>
+	</div>
+</div>
+
+<!-- Dirección de despacho-->
+
+<div class="row">
+		<div class="col-sm-4">
+			<div class="form-group">
+				<label for="txtDireccionEntrega">Dirección de despacho:</label>
+                <input type="tel" required class="form-control" id="txtDireccionEntrega"
+                    aria-describedby="direccionHelp" minlength="10" placeholder="Av. siempre viva">
+                <small id="direccionHelp" class="form-text text-muted">Dirección/Calle/Pasaje</small>
+            </div>
+		</div>
+		<div class="col-sm-2">
+			<div class="form-group">
+                <label for="txtNumeroDireccion">Número:</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">#</div>
+                    </div>
+                    <input required minlength="2" maxlength="7" type="text" class="form-control" id="txtNumeroDireccion"  aria-describedby="numeroHelp" placeholder="916">
+                    </div>
+           </div>
+		</div>
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label for="txtRecepciona">Comuna:</label>
+				<input required type="text" class="form-control" id="txtComuna" aria-describedby="ComunaHelp" maxlength="20"
+					placeholder="Providencia">
+				<small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
+			</div>
+		</div>
+        <div class="col-sm-3">
+                 <div class="form-group">
+                                <label for="regiones">Región:</label>
+                                <select required class="form-control" id="regiones">
+                                    <option selected disabled value="">Seleccione una región</option>
+                                    <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
+                                    <option value="Región de Tarapaca">Región de Tarapaca</option>
+                                    <option value="Región de Antofagasta">Región de Antofagasta</option>
+                                    <option value="Región de Atacama">Región de Atacama</option>
+                                    <option value="Región de Coquimbo">Región de Coquimbo</option>
+                                    <option value="Región de Valparaiso">Región de Valparaiso</option>
+                                    <option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="Región del Maule">Región del Maule</option>
+                                    <option value="Región de Ñuble">Región de Ñuble</option>
+                                    <option value="Región del Biobío">Región del Biobío</option>
+                                    <option value="Región de La Araucania">Región de La Araucania</option>
+                                    <option value="Región de Los Rios">Región de Los Rios</option>
+                                    <option value="Región de Los Lagos">Región de Los Lagos</option>
+                                    <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
+                                    <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
+                                    <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago
+                                    </option>
+                                </select>
+                </div>
+        </div>
+</div>
+
+<!-- Otro Receptor -->
+
+<div class="row">
+
+        <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Quienrecibe()" id="Recibeotro"
+                                    value=""><strong> ¿Recibe otra persona?</strong></label>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+                            <label for="txtRecept">Nombre de quien recibe:</label>
+                            <input required type="text" class="form-control" disabled id="txtRecept" aria-describedby="receptHelp" maxlength="40"
+                            placeholder="Ana María Cortez Pérez">
+                        <small id="receptHelp" class="form-text text-muted">Nombre completo</small>
+        </div>
+</div>
+        <div class="col-sm-3">
+                <div class="form-group">
+                        <label for="txtRutReceptor1">Rut de quien recibe:</label>
+                <div class="row">
+                    <div class="col-sm-7">
+                            <input type="text" required class="form-control" disabled id="txtRutReceptor1"
+                            aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
+                    </div> 
+                 <div class="col-sm-4">
+                            <input type="text" required class="form-control" disabled id="txtRutReceptor2"
+                            aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
+                    </div>
+                </div>
+            <small id="RutHelp" class="form-text text-muted">No acepta N° de pasaporte</small>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="txtTelefonoContacto3">Teléfono de quien recibe:</label>
+                <input required type="tel" class="form-control" disabled id="txtTelefonoReceptor"maxlength="9" placeholder="987654321 ó 712310134">
+				<small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
+            </div>
+    </div>
+</div>
+
+                    <script>
+                        function Quienrecibe() {
+                            if (document.getElementById("Recibeotro").checked) 
+                            {
+                                document.getElementById("txtRecept").removeAttribute('disabled');
+                                document.getElementById("txtRutReceptor1").removeAttribute('disabled');
+                                document.getElementById("txtRutReceptor2").removeAttribute('disabled');
+                                document.getElementById("txtTelefonoReceptor").removeAttribute('disabled');
+                                
+                                
+                            } else 
+                            {
+                                document.getElementById("txtRecept").disabled=true;
+                                document.getElementById("txtRutReceptor1").disabled=true;
+                                document.getElementById("txtRutReceptor2").disabled=true;
+                                document.getElementById("txtTelefonoReceptor").disabled=true;
+								document.getElementById("txtRecept").value="";
+                                document.getElementById("txtRutReceptor1").value="";
+                                document.getElementById("txtRutReceptor2").value="";
+                                document.getElementById("txtTelefonoReceptor").value="";
+
+                            }
+                        };
+                    </script>
+
+<!-- Planes-->
+
+
+<div class="row">
+    <div class="col-sm-5">
+        <div id="1line" class="form-group">
+            <label for="SelectPlan">Plan BAM 1 a contratar:</label>
+            <select class="form-control" id="SelectPlan" aria-describedby="PlanHelp" required>
+                        <option selected disabled value="">Seleccione plan a contratar</option>
+                        <option
+                            value="BAM 20 Gigas">
+                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                        <option
+                            value="BAM 40 Gigas">
+                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                        <option
+                            value="BAM 60 Gigas">
+                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                        <option
+                            value="BAM 90 Gigas">
+                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                        <option
+                            value="BAM 120 Gigas">
+                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+            </select>
+        </div>
+    </div>
+	<div class="col-sm-2" style="padding-top: 30px">
+                        <label class="checkbox"><input type="checkbox"  id="OtroPlan2"
+                                onclick="MasDeUnaLinea2()" value=""><strong>¿Agregas otro plan?</strong></label>
+	</div>
+	<div class="col-sm-5">
+        <div id="1line" class="form-group">
+            <label for="SelectPlan2">Plan BAM 2 a contratar:</label>
+            <select class="form-control" id="SelectPlan2" aria-describedby="PlanHelp" required disabled>
+                        <option selected disabled value="">Seleccione plan a contratar</option>
+                        <option
+                            value="BAM 20 Gigas">
+                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                        <option
+                            value="BAM 40 Gigas">
+                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                        <option
+                            value="BAM 60 Gigas">
+                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                        <option
+                            value="BAM 90 Gigas">
+                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                        <option
+                            value="BAM 120 Gigas">
+                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script>
+                        function MasDeUnaLinea2() {
+                            if (document.getElementById("OtroPlan2").checked) 
+                            {
+                                document.getElementById("SelectPlan2").removeAttribute('disabled');
+                                
+                            } else 
+                            {
+                                document.getElementById("SelectPlan2").disabled=true;
+								document.getElementById("SelectPlan2").value="";
+
+                             
+                            }
+                        };
+                    </script>
+
+<!-- Boton ENVIAR-->
+
+
+<br>
+<div class="text-center">
+    <a class="btn btn-success btn-lg" onclick="changeLabel()">Generar Script</a>
+</div>
+
+
+<!-- Texto al cliente -->
+
+</div>
+<script type="text/javascript">
+    function changeLabel() {
+        var intro = "¡Has tomado una gran decisión! Y como no contamos con letra chica a continuación escucharás una grabación que dura 1 minuto y 30 segundos con las condiciones que respaldan tu contratación, por lo que te pido que escuches atentamente y no cortes ya que yo retomaré tu llamado para resolver tus dudas y realizar un breve resumen de la contratación realizada.<br/><br/> <strong>[EJECUTIVO MARCA EL 4407]</strong><br/>";
+
+        var nombre = document.getElementById('txtNombreCliente').value;
+		var rutCli = document.getElementById('txtRutCliente1').value + "-" + document.getElementById('txtRutCliente2').value;
+		var NumeroContacto1 = "+56"+document.getElementById('txtTelefonoContacto1').value;
+		var NumeroContacto2 = " y +56"+document.getElementById('txtTelefonoContacto2').value;
+		var correoCli = document.getElementById('txtCorreoCli').value;
+		var DireccionDespacho = document.getElementById('txtDireccionEntrega').value;
+		var numero = document.getElementById('txtNumeroDireccion').value;
+		var comuna = document.getElementById('txtComuna').value;
+		var region = document.getElementById('regiones').value;
+		var receptor = document.getElementById('txtRecept').value;
+		var RutReceptor = document.getElementById('txtRutReceptor1').value + "-" + document.getElementById("txtRutReceptor2").value;
+		var TelReceptor = document.getElementById('txtTelefonoReceptor').value;
+		
+		var plan1 = document.getElementById('SelectPlan').value;
+		var plan2 = document.getElementById('SelectPlan2').value;
+				
+		var mensaje = intro+ "<br/>Te cuento que ahora validaremos tus datos personales: <br/> Tu nombre completo es: <strong>" + nombre +"</strong>, tu rut es: <strong>"+rutCli+"</strong>, tu correo electrónico es <strong>"+correoCli+"</strong> y tu numero de contacto es <strong>"
+        +NumeroContacto1+NumeroContacto2+"</strong>. <br/><strong>Te recuerdo que al ser una línea nueva, se te asignará un número nuevo.</strong> <br/>";
+        
+        var confirmacion=" Confirmas que según la oferta acordada aceptas contratar nuestro";
+		var condiciones = " La velocidad máxima descarga es de 2 Mbps en red 3G y 20 Mbps en 4G, y subida es 512 Kbps en red 3G y 5 Mbps en 4G. Al superar tu consumo dentro de un mismo periodo de facturación,  tu velocidad se reduce a 32 kbps de descarga y subida. Por lo que sigues navegando. En caso de usar todos tus gigas,  puedes comprar bolsas de datos para aumentar la velocidad.<br>Y siempre queremos entregarte más… Los gigas de tu plan de internet móvil que no has utilizado durante el mes, se cargarán al mes siguiente para que los utilices de primero, antes de consumir los gigas de tu plan mensual. Sin embargo, si aún te quedan esos mismos gigas, no se acumularán al mes subsiguiente.<br>Por disposición te recuerdo que Tú como cliente debes revisar la compatibilidad de tu equipo con nuestra red 4G en nuestra página www.wom.cl/4G  después de adquirir  este servicio.<br/>";
+        var documentos = " Además, enviarás al Whatsapp corporativo +56935788140 la foto legible de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al whatsapp que te indique. Considerar que sin este documento, tu contratación no se realizará.<br>";
+		var finVenta = " Y cómo TU LADO WOM LO DA TODO  adicional al chip de tu plan, recibirás GRATIS un chip prepago con WHATSAPP ILIMITADO  POR 1 AÑO (que incluye llamadas) + 20 MB y 10 Min. Para que lo regales a algún familiar o amigo y pueda aprovechar todas nuestras ofertas.<br/><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong>";
+		var despacho = "";
+		
+		
+		var planDescrip = "";
+		var planDes1 =""; 
+		var planDes2 ="";
+		
+		if(document.getElementById("OtroPlan2").checked==true){
+			switch (plan1){
+				case "BAM 20 Gigas":
+					planDes1= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+					break;			
+				case "BAM 40 Gigas":
+					planDes1= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+					break;	
+				case "BAM 60 Gigas":
+					planDes1= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+					break;
+				case "BAM 90 Gigas":
+					planDes1= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+					break;
+				default:
+					planDes1= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+			}
+			
+			switch (plan2){
+				case "BAM 20 Gigas":
+					planDes2= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+					break;			
+				case "BAM 40 Gigas":
+					planDes2= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+					break;	
+				case "BAM 60 Gigas":
+					planDes2= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+					break;
+				case "BAM 90 Gigas":
+					planDes2= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+					break;
+				default:
+					planDes2= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+			}			
+			planDescrip= planDes1+" y "+planDes2;
+		}
+		else{
+			switch (plan1){
+				case "BAM 20 Gigas":
+					planDescrip= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+					break;			
+				case "BAM 40 Gigas":
+					planDescrip= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+					break;	
+				case "BAM 60 Gigas":
+					planDescrip= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+					break;
+				case "BAM 90 Gigas":
+					planDescrip= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+					break;
+				case  "BAM 120 Gigas":
+					planDescrip= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+			}
+		}
+			
+		if(document.getElementById("Recibeotro").checked==true){
+			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+"</strong>, número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
+		}	
+		else{
+			despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+", número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
+		}
+		
+		
+		mensaje= mensaje+confirmacion+planDescrip+condiciones+despacho+documentos+finVenta;
+		
+		
+		
+        document.getElementById('txtRespuesta').innerHTML = mensaje;
+    } 
+</script>
+
+
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+
+<!-- Titulo Comunicado al cliente-->
+
+<div class="highlight-blue" style="background-color: #351a51">
+    
+        <div class="container text-justify">
+            <h2 class="text-center">Comunicado al cliente:</h2>
+            <p align="justify" id="txtRespuesta">Contrato de venta a leer por el ejecutivo...</p>
+
+ <!-- Boton Borrar Script-->           
+        <a class="btn btn-warning" onclick="clearAll()">Borrar Script</a>
+        </div>
+        
+   
+</div>
+
+<script>
+function clearAll(){
+document.getElementById("txtRespuesta").innerHTML="";
+}
+</script>
+
+
+
+</form>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<div>
+<br><br>
+<div class="text-center"> <a href="https://forms.gle/iV831uk1XRwNGjbw7" target="_blank"><h7><b>DEJANOS TUS COMENTARIOS AQUÍ<h7></b></a></div><br>
+<div class="text-center" style="color: #351a51">
+<h8>Designed by IT Chile - ApexAmerica<h8>
+</div>  
+</body>
+
+</html>

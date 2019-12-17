@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>WOM</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/Dark-NavBar.css">
+<link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-icon-180x180.png">
+<link rel="manifest" href="/assets/favico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/favico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 40%;
+  height: 352px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 5px 3px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 60%;
+  border-left: none;
+  height: 352px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.material-icons{
+float: left;
+}
+</style>
+</head>
+
+<body>
+            <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+                style="height:80px;background-color:#351a51;color:#ffffff;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="color:#ffffff;" href="index.html">
+                        <img src="assets/img/WOM_logo.png" style="max-width: 70px;">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span
+                            class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link active"
+                                    style="color:#ffffff;"><img src="assets/img/WhatsApp_icon.png" style="max-width:27px;"></i>&nbsp;Whatsapp corporativo +56935788140 </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"
+                                    style="color:#ffffff;"><i class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<br>
+<div class="container">
+	<div class="text-center" style="color: #351a51">
+    <h2>ETAPAS DE UNA VENTA DE LÍNEA ADICIONAL</h2><br/>   
+</div>
+<div class="tab">
+  <button class="tablinks" onmouseover="openEtapa(event, 'London')">&nbsp Registrar Venta <i class="material-icons">perm_identity</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Paris')">&nbsp Pendiente validación Call Center <i class="material-icons">done</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp En espera de Pago <i class="material-icons">hourglass_full</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp En validación<i class="material-icons">done_all</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp En bodega... <i class="material-icons">business</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp Orden informada <i class="material-icons">assignment</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp Despacho <i class="material-icons">local_shipping</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp Entregado <i class="material-icons">sim_card</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp En ejecución de activación y portabilidad <i class="material-icons">settings_remote</i></button>
+  <button class="tablinks" onmouseover="openEtapa(event, 'Tokyo')">&nbsp Finalizado exitosamente <i class="material-icons">monetization_on</i></button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openEtapa(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</div>
+<br><br>
+<div>
+	<div class="text-center"> <a href="https://forms.gle/iV831uk1XRwNGjbw7" target="_blank"><h7><b>DEJANOS TUS COMENTARIOS AQUÍ<h7></b></a></div><br>
+	<div class="text-center" style="color: #351a51">
+	<h8>Designed by IT Chile - ApexAmerica~<h8>
+	</div> 
+</div> 
+
+</div> 
+</body>
+
+</html>
