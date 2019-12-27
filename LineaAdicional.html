@@ -26,6 +26,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <style>
         input:invalid {
             border: 1px solid red;
@@ -240,107 +241,74 @@
         </div>
 
 
-        <div class="col-sm-5">
-                 
-            <div class="form-group">
-                <label for="txtSucursal">Sucursal:</label>
-                <input required type="text" class="form-control" disabled id="txtSucursal" aria-describedby="ComunaHelp" maxlength="20"
-                    placeholder="Providencia">
-                <small id="ComunaHelp" class="form-text text-muted">Sucursal a la que será enviado.</small>
-            </div>
-        </div>
-            
+<!-- Sucursales de retiro-->
 
 
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label for="txtNumeroDireccionsuc">Número:</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">#</div>
-                    </div>
-                    <input required minlength="2" maxlength="7" type="text" class="form-control" disabled id="txtNumeroDireccionsuc"  aria-describedby="numeroHelp" placeholder="916">
-                    </div>
-           </div>
-        </div>
-
-</div>
-
-
-<div class="row">
-        <div class="col-sm-5">
-            <div class="form-group">
-                <label for="txtComunaret">Comuna:</label>
-                <input required type="text" class="form-control" disabled id="txtComunaret" aria-describedby="ComunaHelp" maxlength="20"
-                    placeholder="Providencia">
-                <small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
-            </div>
-        </div>
-    
-
-        <div class="col-sm-5">
+<div class="col-sm-5">
                  <div class="form-group">
 
-                                <label for="regionessucu">Región</label>
-                                <select required class="form-control" disabled id="regionessuc">
-                                    <option selected disabled value="">Seleccione una región</option>
-                                    <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
-                                    <option value="Región de Tarapaca">Región de Tarapaca</option>
-                                    <option value="Región de Antofagasta">Región de Antofagasta</option>
-                                    <option value="Región de Atacama">Región de Atacama</option>
-                                    <option value="Región de Coquimbo">Región de Coquimbo</option>
-                                    <option value="Región de Valparaiso">Región de Valparaiso</option>
-                                    <option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
-                                    <option value="Región del Maule">Región del Maule</option>
-                                    <option value="Región de Ñuble">Región de Ñuble</option>
-                                    <option value="Región del Biobío">Región del Biobío</option>
-                                    <option value="Región de La Araucania">Región de La Araucania</option>
-                                    <option value="Región de Los Rios">Región de Los Rios</option>
-                                    <option value="Región de Los Lagos">Región de Los Lagos</option>
-                                    <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
-                                    <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
-                                    <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago
-                                    </option>
+                                <label for="regionessucu">Sucursal</label>
+                                <select required class="form-control" disabled id="Sucursal">
+                                    <option selected disabled value="">Seleccione una sucursal</option>
+                                    <!-- <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option> -->
+                                    <!-- <option value="Región de Tarapaca">Región de Tarapaca</option> -->
+                                    <optgroup label="Región de Antofagasta">Región de Antofagasta
+                                    <option>Sucursal Baquedano/comuna Antofagasta/Calle Baquedano 532/ lunes a viernes de 9:00 a 20 hrs, sábado 10 a 19 hrs</option>
+                                    </optgroup>
+                                    <!-- <option value="Región de Atacama">Región de Atacama</option> -->
+                                    <optgroup label="Región de Coquimbo">Región de Coquimbo
+                                    <option>Sucursal Balmaceda/Comuna La Serena/Calle Balmaseda 445/lunes a viernes 9 a 20 hrs, sábado de 10 18 hrs</option>
+                                    </optgroup>
+                                    <optgroup label="Región de Valparaiso">Región de Valparaiso
+                                    <option>Sucursal Etshevers/comuna Viña del mar/calle Valparaíso 495/lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00</option>
+                                    <option>Sucursal Arturo Prat/San Felipe/calle Arturo Prat 723/ Lu a Vi 10:00 a 21:00, Sa 10:00 a 19:00</option>
+                                    <optgroup label="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins
+                                    <option>Sucursal Rancagua 02/comuna Rancagua/calle Independencia 601/ lunes a sábado de 9:00 a 20:00</option>
+                                    </optgroup>
+                                    <optgroup label="Región del Maule">Región del Maule
+                                    <option>Sucursal Linares 02/comuna Linares/calle Independencia local B648/lunes a sábado de 09:30 a 19:30</option>
+                                    </optgroup>
+                                    <!-- <option value="Región de Ñuble">Región de Ñuble</option> -->
+                                    <optgroup label="Región del Biobío">Región del Biobío
+                                    <option>Concepción Chacabuco/comuna Concepción/calle Chacabuco 524/Lu a Vi 09:00 a 19:30, sábado 10:00 a 16:00</option>
+                                    </optgroup>
+                                    <!-- <option value="Región de La Araucania">Región de La Araucania</option> -->
+                                    <!-- <option value="Región de Los Rios">Región de Los Rios</option> -->
+                                    <!-- <option value="Región de Los Lagos">Región de Los Lagos</option> -->
+                                    <!-- <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option> -->
+                                    <!-- <option value="Región de Magallanes y de la Antártica Chilena">Región de Magallanes y de la Antártica Chilena</option> -->
+                                    <optgroup label="Región Metropolitana de Santiago">Región Metropolitana de Santiago
+                                    <option>Sucursal Ahumada/comuna Santiago/calle Ahumada 64/Lu a Vi 09:00 a 20:00, sábado 11:00 a 19:00</option>
+                                    <option>Sucursal General Mackenna/comuna Santiago/calle General Mackenna 1321/Lu a Vi 09:00 a 18:00, sábado 10:00 a 14:00</option>
+                                    <option>Sucursal Apumanque/Comuna Las Condes/calle Apoquindo 6085/Lu a Vi 09:00 a 20:00, sábado 10:00 a 19:00</option>
+                                    <option>Sucursal Vitacura/comuna Las Condes/calle Nueva Tajamar 289/ Lu a Vi 10:00 a 20:00, sábado 10:30 a 18:30</option>
+                                    <option>Sucursal Arauco Maipú/comuna Maipú/av. Américo Vespucio L1009 n°1001/lunes a sábado de 9:00 a 20:00</option>
+                                    <option>Sucursal Los Leones/comuna Providencia/calle nueva providencia 2228/lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00</option>
+                                    <option>Sucursal Mall plaza norte/comuna Huechuraba/Américo Vespucio norte 1737/ lunes a Domingo 10:00 a 21:00</option>
+                                    <option>Sucursal Mall plaza los dominicos/comuna Las Condes/Av. Padre Hurtado Sur, BS 1456 785/lunes a Domingo de 10:00 a 21:30</option>
+                                    </optgroup>
                                 </select>
                 </div>
             </div>
-    </div>
-
+</div>
 
 
                     <script>
                         function Retiro() {
                             if (document.getElementById("Direccionretiro").checked) 
                             {
-                                document.getElementById("txtSucursal").removeAttribute('disabled');
-                                document.getElementById("txtNumeroDireccionsuc").removeAttribute('disabled');
-                                document.getElementById("txtComunaret").removeAttribute('disabled');
-                                document.getElementById("regionessuc").removeAttribute('disabled');
+                                document.getElementById("Sucursal").removeAttribute('disabled');
+                                
                                 
                                 
                             } else 
                             {
-                                document.getElementById("txtSucursal").disabled=true;
-                                document.getElementById("txtNumeroDireccionsuc").disabled=true;
-                                document.getElementById("txtComunaret").disabled=true;
-                                document.getElementById("regionessuc").disabled=true;
-                                document.getElementById("txtSucursal").value="";
-                                document.getElementById("txtNumeroDireccionsuc").value="";
-                                document.getElementById("txtComunaret").value="";
-                                document.getElementById("regionessuc").value="";
-                                
+                                document.getElementById("Sucursal").disabled=true;
+                                document.getElementById("Sucursal").value="";
+                                                                
                             }
                         };
                     </script>
-
-
-
-
-
-
-
-
-
 
 
 
