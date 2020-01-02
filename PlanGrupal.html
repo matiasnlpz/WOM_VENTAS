@@ -204,10 +204,11 @@
 
 
 
-                    <script>
+                  <script>
                         function Despacho() {
                             if (document.getElementById("Direcciondespacho").checked) 
                             {
+                                document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtDireccionEntrega").removeAttribute('disabled');
                                 document.getElementById("txtNumeroDireccion").removeAttribute('disabled');
                                 document.getElementById("txtComuna").removeAttribute('disabled');
@@ -216,6 +217,7 @@
                                 
                             } else 
                             {
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtDireccionEntrega").disabled=true;
                                 document.getElementById("txtNumeroDireccion").disabled=true;
                                 document.getElementById("txtComuna").disabled=true;
@@ -368,22 +370,22 @@
                         function Retiro() {
                             if (document.getElementById("Direccionretiro").checked) 
                             {
+                                document.getElementById("Direcciondespacho").disabled=true;
+                                document.getElementById("Recibeotro").disabled=true;
                                 document.getElementById("Sucursal").removeAttribute('disabled');
                                 
                                 
                                 
                             } else 
-                            {
+                            {   
+                                document.getElementById("Direcciondespacho").removeAttribute('disabled');
+                                document.getElementById("Recibeotro").removeAttribute('disabled');
                                 document.getElementById("Sucursal").disabled=true;
                                 document.getElementById("Sucursal").value="";
                                                                 
                             }
                         };
                     </script>
-
-
-
-
 
 
 
@@ -465,10 +467,11 @@
 			
 	<!-- despliegue de planes -->
 
-                    <script>
+                   <script>
                         function Quienrecibe() {
                             if (document.getElementById("Recibeotro").checked) 
                             {
+                                document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtRecept").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor1").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor2").removeAttribute('disabled');
@@ -477,10 +480,15 @@
                                 
                             } else 
                             {
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtRecept").disabled=true;
                                 document.getElementById("txtRutReceptor1").disabled=true;
                                 document.getElementById("txtRutReceptor2").disabled=true;
                                 document.getElementById("txtTelefonoReceptor").disabled=true;
+                                document.getElementById("txtRecept").value="";
+                                document.getElementById("txtRutReceptor1").value="";
+                                document.getElementById("txtRutReceptor2").value="";
+                                document.getElementById("txtTelefonoReceptor").value="";
 
                             }
                         };
