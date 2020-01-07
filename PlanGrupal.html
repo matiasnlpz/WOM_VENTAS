@@ -304,6 +304,9 @@
 <!-- Retiro-->
 
 
+<!-- Retiro-->
+
+
 
 
 <div class="row">
@@ -314,56 +317,119 @@
         </div>
 
 
-<!-- Sucursales de retiro-->
+
+<script type="text/javascript">
+
+function cambiar() {
+    var x = document.getElementById("sucursal");
+    var vacio = new Option("Elige una opción","");
+    x.options[x.options.length] = vacio;
+    x.selectedIndex = vacio;
+}
+function mostrar(){
+    var region = document.getElementById("region").value;
+    var x = document.getElementById("sucursal");    
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x.options[i].id == region){
+            x.options[i].style.display = 'block';
+        } else {
+            x.options[i].style.display = 'none';
+        }
+    }
+    if (region == 2 || region == null) {
+        var vacio = new Option("Elige una opción","");
+        x.options[x.options.length] = vacio;
+        x.selectedIndex = vacio;
+    }
+}
+</script>
 
 
-<div class="col-sm-10">
-                 <div class="form-group">
 
-                                <label for="regionessucu">Sucursal</label>
-                                <select required class="form-control" disabled id="Sucursal">
-                                    <option selected disabled value="">Seleccione una sucursal</option>
-                                    <!-- <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option> -->
-                                    <!-- <option value="Región de Tarapaca">Región de Tarapaca</option> -->
-                                    <optgroup label="Región de Antofagasta">Región de Antofagasta
-                                    <option>Sucursal Baquedano/comuna Antofagasta/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs</option>
-                                    </optgroup>
-                                    <!-- <option value="Región de Atacama">Región de Atacama</option> -->
-                                    <optgroup label="Región de Coquimbo">Región de Coquimbo
-                                    <option>Sucursal Balmaceda/Comuna La Serena/Calle Balmaseda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs</option>
-                                    </optgroup>
-                                    <optgroup label="Región de Valparaiso">Región de Valparaiso
-                                    <option>Sucursal Etshevers/comuna Viña del mar/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs</option>
-                                    <option>Sucursal Arturo Prat/San Felipe/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs</option>
-                                    <optgroup label="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins
-                                    <option>Sucursal Rancagua 02/comuna Rancagua/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
-                                    </optgroup>
-                                    <optgroup label="Región del Maule">Región del Maule
-                                    <option>Sucursal Linares 02/comuna Linares/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs</option>
-                                    </optgroup>
-                                    <!-- <option value="Región de Ñuble">Región de Ñuble</option> -->
-                                    <optgroup label="Región del Biobío">Región del Biobío
-                                    <option>Concepción Chacabuco/comuna Concepción/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs</option>
-                                    </optgroup>
-                                    <!-- <option value="Región de La Araucania">Región de La Araucania</option> -->
-                                    <!-- <option value="Región de Los Rios">Región de Los Rios</option> -->
-                                    <!-- <option value="Región de Los Lagos">Región de Los Lagos</option> -->
-                                    <!-- <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option> -->
-                                    <!-- <option value="Región de Magallanes y de la Antártica Chilena">Región de Magallanes y de la Antártica Chilena</option> -->
-                                    <optgroup label="Región Metropolitana de Santiago">Región Metropolitana de Santiago
-                                    <option>Sucursal Ahumada/comuna Santiago/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs</option>
-                                    <option>Sucursal General Mackenna/comuna Santiago/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs</option>
-                                    <option>Sucursal Apumanque/Comuna Las Condes/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs</option>
-                                    <option>Sucursal Vitacura/comuna Las Condes/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs</option>
-                                    <option>Sucursal Arauco Maipú/comuna Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
-                                    <option>Sucursal Los Leones/comuna Providencia/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs</option>
-                                    <option>Sucursal Mall plaza norte/comuna Huechuraba/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs</option>
-                                    <option>Sucursal Mall plaza los dominicos/comuna Las Condes/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs</option>
-                                    </optgroup>
-                                </select>
-                </div>
-            </div>
+
+<div class="col-sm-5">
+    <form method="get" action="try.html" >
+            
+        <label for="region">Region</label>  
+        <select name="region" id="region" onchange="cambiar()" onClick="mostrar()" required class="form-control" disabled id="regiones">
+
+                                    
+                                    <option selected value=""> Seleccione una región </option>
+                              <!--  <option value="1">Región de Arica a Parinacota</option> --> 
+                              <!--  <option value="2">Región de Tarapaca</option> --> 
+                                    <option value="3">Región de Antofagasta</option>
+                              <!--  <option value="4">Región de Atacama</option> --> 
+                                    <option value="5">Región de Coquimbo</option>
+                                    <option value="6">Región de Valparaiso</option>
+                                    <option value="7">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="8">Región del Maule</option>
+                              <!--  <option value="9">Región de Ñuble</option> --> 
+                                    <option value="10">Región del Biobío</option>
+                              <!--  <option value="11">Región de La Araucania</option> --> 
+                              <!--  <option value="12">Región de Los Rios</option> --> 
+                              <!--  <option value="13">Región de Los Lagos</option> --> 
+                              <!--  <option value="14">Región de Aysén del G. Carlos Ibañez del Campo</option> --> 
+                              <!--  <option value="15">Región de Magallanes y de la Antártica Chilena</option> --> 
+                                    <option value="16">Región Metropolitana de Santiago
+                                    </option>
+   
+        </select>
+        <small id="RegionHelp" class="form-text text-muted">Región a la que será enviado.</small>
+    </div>
 </div>
+
+<!-- Sucursal para retiro-->
+
+
+<div class="row">
+
+        <div class="col-sm-12">
+            
+        <label for="Sucursal">Sucursal</label> 
+        <select name="sucursal" id="sucursal" required class="form-control" disabled id="sucursal">
+            <option selected value=""> Seleccione una Sucursal </option>
+    
+            <option value="Región de Antofagasta/Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs" id="3" style='display:none;'>Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs</option>
+
+            <option value="Región de Coquimbo/Comuna La Serena/Sucursal Balmaceda/Calle Balmaseda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs" id="5" style='display:none;'>Comuna La Serena/Sucursal Balmaceda/Calle Balmaceda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs</option>
+            
+            <option value="Región de Valparaiso/Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs" id="6" style='display:none;'>Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs</option>
+            
+            <option value="Región de Valparaiso/San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs" id="6" style='display:none;'>San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs</option>
+            
+            <option value="Region del Libertador Bernado O'Higgins/Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="7" style='display:none;'>Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región del Maule/Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs" id="8" style='display:none;'>Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs</option>
+            
+            <option value="Región del Biobío/Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs" id="10" style='display:none;'>Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs</option>
+
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="16" style='display:none;'>Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs" id="16" style='display:none;'>Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs" id="16" style='display:none;'>Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs</option>
+            
+            
+        </select>
+        <small id="SucursalHelp" class="form-text text-muted">Sucursal a la que será enviado.</small>
+                
+        </div>
+    </div>
+        
+</form>
+
+
 
 
                     <script>
@@ -372,7 +438,8 @@
                             {
                                 document.getElementById("Direcciondespacho").disabled=true;
                                 document.getElementById("Recibeotro").disabled=true;
-                                document.getElementById("Sucursal").removeAttribute('disabled');
+                                document.getElementById("region").removeAttribute('disabled');
+                                document.getElementById("sucursal").removeAttribute('disabled');
                                 
                                 
                                 
@@ -380,12 +447,15 @@
                             {   
                                 document.getElementById("Direcciondespacho").removeAttribute('disabled');
                                 document.getElementById("Recibeotro").removeAttribute('disabled');
-                                document.getElementById("Sucursal").disabled=true;
-                                document.getElementById("Sucursal").value="";
+                                document.getElementById("region").disabled=true;
+                                document.getElementById("region").value="";
+                                document.getElementById("sucursal").disabled=true;
+                                document.getElementById("sucursal").value="";
                                                                 
                             }
                         };
                     </script>
+
 
 
 
@@ -585,7 +655,7 @@
                         var DireccionDespacho = document.getElementById('txtDireccionEntrega').value;
                         var comuna = document.getElementById('txtComuna').value;
                         var region = document.getElementById('regiones').value;
-                        var sucursal =document.getElementById('Sucursal').value;
+                        var sucursal =document.getElementById('sucursal').value;
                         var receptor = document.getElementById('txtRecept').value;
                         var RutReceptor = document.getElementById('txtRutReceptor1').value + "-" + document.getElementById("txtRutReceptor2").value;
                         var TelReceptor = document.getElementById('txtTelefonoReceptor').value;
@@ -598,7 +668,7 @@
 						var infoPlan1="";
 						var infoPlan2="";
 						var infoPlan3="";
-						var sucursal =document.getElementById('Sucursal').value;
+						var sucursal =document.getElementById('sucursal').value;
 
                         
 						var mensaje = intro + "<br/><br/>Ahora terminaremos con un breve resumen del plan que te llevas por lo que al final te pido confirmar con un SÍ.<br><strong> Tu nombre completo es: " + nombre + ", tu rut es: " + rutCli + ", tu correo electrónico es: " + correoCli +", tus números de contactos son: "+ NumeroContacto1 +" y "+ NumeroContacto2 +".</strong>";
@@ -824,7 +894,7 @@
 
 						if(document.getElementById("Direccionretiro").checked==true) {
 
-        					retiro = " <br/>Lo ofertado será despachado a nuestra <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
+        					retiro = " <br/>Lo ofertado será despachado a <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
 
 
 
