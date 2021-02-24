@@ -112,13 +112,13 @@
     </div>
     <div class="col-sm-6">
         <div class="form-group">
-            <label for="txtTelefonoBAM">Número BAM a migrar:</label>
+            <label for="txtTelefonoINTERNET">Número BAM a migrar:</label>
             <div class="input-group mb-2">
                     <div class="input-group-prepend">
                       <div class="input-group-text">+56</div>
                     </div>
-            <input required type="tel" class="form-control" id="txtTelefonoBAM"
-                aria-describedby="numberBAM" maxlength="9" placeholder="987654321">
+            <input required type="tel" class="form-control" id="txtTelefonoINTERNET"
+                aria-describedby="numberINTERNET" maxlength="9" placeholder="987654321">
                 </div>
         </div>
     </div>
@@ -135,20 +135,20 @@
             <select class="form-control" id="SelectPlan" aria-describedby="PlanHelp">
                         <option selected disabled value="">Seleccione plan a contratar</option>
                         <option
-                            value="BAM 20 Gigas">
-                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                            value="INTERNET 20 Gigas">
+                            INTERNET 20 Gigas - Cargo fijo de $9.990</option>
                         <option
-                            value="BAM 40 Gigas">
-                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                            value="INTERNET 40 Gigas">
+                            INTERNET 40 Gigas - Cargo fijo de $12.990</option>
                         <option
-                            value="BAM 60 Gigas">
-                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                            value="INTERNET 60 Gigas">
+                            INTERNET 60 Gigas - Cargo fijo de $15.990</option>
                         <option
-                            value="BAM 90 Gigas">
-                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                            value="INTERNET 90 Gigas">
+                            INTERNET 90 Gigas - Cargo fijo de $19.990</option>
                         <option
-                            value="BAM 120 Gigas">
-                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+                            value="INTERNET 120 Gigas">
+                            INTERNET 120 Gigas - Cargo fijo de $25.990</option>
             </select>
         </div>
     </div>
@@ -194,12 +194,12 @@
         var nombre = document.getElementById('txtNombreCliente').value;
         var rutCli = document.getElementById('txtRutCliente1').value +"-"+ document.getElementById('txtRutCliente2').value;
 		var NumeroContacto1="+56"+document.getElementById('txtTelefonoContacto1').value;
-        var NumeroBAM= "+56"+document.getElementById('txtTelefonoBAM').value;
+        var NumeroINTERNET= "+56"+document.getElementById('txtTelefonoINTERNET').value;
         var plan = document.getElementById('SelectPlan').value;
 		var ciclo = document.getElementById('SelectCiclo').value;
 
         var mensaje = intro+ "<br/> <br/>Te cuento que ahora validaremos tus datos personales: <br/> Tu nombre completo es: <strong>" + nombre +"</strong>, tu rut es: <strong>"+rutCli+
-        "</strong>, tu número de contacto es: <strong>"+ NumeroContacto1+"</strong>, y contratas el plan <strong>"+plan+"</strong>, con el número prepago <strong>"+NumeroBAM+"</strong>.<br/>";
+        "</strong>, tu número de contacto es: <strong>"+ NumeroContacto1+"</strong>, y contratas el plan <strong>"+plan+"</strong>, con el número prepago <strong>"+NumeroINTERNET+"</strong>.<br/>";
         
         var confirmacion=" Confirmas que según la oferta acordada aceptas contratar nuestro";
 		var condiciones = " La velocidad máxima descarga es de 2 Mbps en red 3G y 20 Mbps en 4G, y subida es 512 Kbps en red 3G y 5 Mbps en 4G. Al superar tu consumo dentro de un mismo periodo de facturación,  tu velocidad se reduce a 32 kbps de descarga y subida. Por lo que sigues navegando. En caso de usar todos tus gigas,  puedes comprar bolsas de datos para aumentar la velocidad.<br>Y siempre queremos entregarte más… Los gigas de tu plan de Internet móvil que no has utilizado durante el mes, se cargarán al mes siguiente para que los utilices de primero, antes de consumir los gigas de tu plan mensual. Sin embargo, si aún te quedan esos mismos gigas, no se acumularán al mes subsiguiente.<br>";
@@ -207,20 +207,20 @@
 		var planDescrip = "";
 		
 		switch (plan){
-			case "BAM 20 Gigas":
-				planDescrip= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo es de $9.990.";
+			case "INTERNET 20 Gigas":
+				planDescrip= " <strong>Plan INTERNET 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo es de $9.990.";
 				break;			
-			case "BAM 40 Gigas":
-				planDescrip= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+			case "INTERNET 40 Gigas":
+				planDescrip= " <strong>Plan INTERNET 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
 				break;	
-			case "BAM 60 Gigas":
-				planDescrip= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+			case "INTERNET 60 Gigas":
+				planDescrip= " <strong>Plan INTERNET 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
 				break;
-			case "BAM 90 Gigas":
-				planDescrip= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+			case "INTERNET 90 Gigas":
+				planDescrip= " <strong>Plan INTERNET 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
 				break;
 			default:
-				planDescrip= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+				planDescrip= " <strong>Plan INTERNET 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
 			}
 		
 		var cicloDescrip="";

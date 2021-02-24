@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOM</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Dark-NavBar.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="index.html">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-icon-180x180.png">
+    <link rel="manifest" href="/assets/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        input:invalid {
+            border: 1px solid red;
+        }
+
+        input:valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+            <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+                style="height:80px;background-color:#351a51;color:#ffffff;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="color:#ffffff;" href="index.html">
+                        <img src="assets/img/WOM_logo.png" style="max-width: 70px;">
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span
+                            class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item" role="presentation"><a class="nav-link active"
+                                    style="color:#ffffff;"><img src="assets/img/WhatsApp_icon.png" style="max-width:27px;"></i>&nbsp;Whatsapp corporativo +56935788140 </a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"
+                                    style="color:#ffffff;"><i class="fa fa-home"></i>&nbsp;Inicio</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+<!-- Formulario con datos del cliente-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <h3 class="text-center" style="color: #351a51">Recambio de Equipo</h3>
+                    <br>
+
+
+<!-- Datos del cliente-->
+
+<h4 class="text-center" style="color: #351a51">Datos del Cliente</h3>
+                    <br>
+
+<div class="row">
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtNombreCliente">Nombre completo cliente:</label>
+        <input type="text" required class="form-control" id="txtNombreCliente"
+            aria-describedby="nombreHelp" placeholder="Juanito Andrés Perez Rosales" maxlength="80" minlength="10">
+        <small id="nombreHelp" class="form-text text-muted">Nombre completo del cliente</small>
+    </div>
+</div>
+<div class="col-sm-6">
+    <div class="form-group">
+        <label for="txtRutCliente">Rut cliente:</label>
+
+<div class="row">
+    <div class="col-sm-9">
+            <input type="text" required class="form-control" id="txtRutCliente1"
+            aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
+    </div> 
+    <div class="col-sm-1">-</div> 
+    <div class="col-sm-2">
+            <input type="text" required class="form-control" id="txtRutCliente2"
+            aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
+    </div>
+</div>
+
+
+        <small id="rutHelp" class="form-text text-muted">Rut cliente</small>
+    </div>
+
+</div>
+
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtNumSerie">Numero de Serie:</label>
+
+<div class="row">
+    <div class="col-sm-9">
+            <input type="text" required class="form-control" id="txtNumSerie"
+            aria-describedby="rutHelp" placeholder="A123456789" maxlength="10" minlength="9">
+    </div> 
+
+</div>
+       
+ <!-- Imagen Serie CI-->
+
+<a href="#">
+    ¿Dónde encuentro el número de serie?
+    <img src="assets/img/ci2.jpg">
+</a>
+ 
+
+</div>
+
+
+</div>
+
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="txtTelefonoContacto">Número de contacto:</label>
+            <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">+56</div>
+                    </div>
+            <input required type="tel" class="form-control" id="txtTelefonoContacto"
+                aria-describedby="numberContactHelp" maxlength="9" placeholder="987654321">
+            </div>
+            <small id="NroContactoHelp" class="form-text text-muted">Número de contacto</small>
+        </div>
+        
+    </div>
+    
+	<div class="col-sm-4">
+		<div class="form-group">
+			<label for="txtCorreoCli">Correo electronico del cliente:</label>
+			<input required type="email" class="form-control" id="txtCorreoCli" aria-describedby="CorreoClitHelp" minlength="10"
+				placeholder="correo@receptor.com">
+			<small id="CorreoClitHelp" class="form-text text-muted">Correo electronico del cliente solicitante.</small>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Datos del equipo-->
+
+<h4 class="text-center" style="color: #351a51">Datos del Equipo</h3>
+                    <br>
+
+<div class="row">
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtMarcaEquipo">Marca:</label>
+        <input type="text" required class="form-control" id="txtMarcaEquipo"
+            aria-describedby="nombreHelp" placeholder="Samsung" maxlength="50" minlength="2">
+        <small id="nombreHelp" class="form-text text-muted">Marca del equipo</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtModeloEquipo">Modelo:</label>
+        <input type="text" required class="form-control" id="txtModeloEquipo"
+            aria-describedby="nombreHelp" placeholder="SM-001" maxlength="60" minlength="2">
+        <small id="nombreHelp" class="form-text text-muted">Modelo del equipo</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtColorEquipo">Color:</label>
+        <input type="text" required class="form-control" id="txtColorEquipo"
+            aria-describedby="nombreHelp" placeholder="Negro" maxlength="50" minlength="2">
+        <small id="nombreHelp" class="form-text text-muted">Color del equipo</small>
+    </div>
+</div>
+</div>
+
+
+<!-- Datos de Venta-->
+
+<h4 class="text-center" style="color: #351a51">Modo de Venta</h3>
+                    <br>
+
+
+
+<div class="row">
+        
+        <div class="col-sm-5">
+                 <div class="form-group" >
+
+                                <label for="modoventacb">Modo de Venta</label>
+                                <select required class="form-control"  id="ModoVentaCB" name="ModoVentaCB"onChange="ModoVentaOnChange(this)" >
+                                    <option selected disabled value="">Seleccione un Modo</option>
+                                    <option value="Venta en Cuotas">Venta en Cuotas</option>
+                                    <option value="Venta WebPay">Venta Webpay</option>
+                                    </option>
+                                </select>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+<!-- Selección Venta en Cuotas -->
+
+<div class="row" id="VentaenCuotas" style="display:none;">
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaPreferencialVC">Valor Preferencial Cuotas:</label>
+        <input type="text" required class="form-control" id="txtCuotaPreferencialVC"
+            aria-describedby="nombreHelp" placeholder="$ 99.990" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Valor Preferencial</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaInicialVC">Cuota Inicial :</label>
+        <input type="text" required class="form-control" id="txtCuotaInicialVC"
+            aria-describedby="nombreHelp" placeholder="$ 0" maxlength="60" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Cuota Inicial</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaMensualVC">Cuota Mensual:</label>
+        <input type="text" required class="form-control" id="txtCuotaMensualVC"
+            aria-describedby="nombreHelp" placeholder="$ 4990" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Cuota Mensual</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtFechaVencimientoBoletaVC">Fecha vencimiento Boleta:</label>
+        <input type="date" required class="form-control" id="txtFechaVencimientoBoletaVC"
+            aria-describedby="nombreHelp" placeholder="Fecha vencimiento" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Fecha vencimiento Boleta</small>
+    </div>
+</div>
+
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtValorTotalVC">Valor Total Cuotas:</label>
+        <input type="text" required class="form-control" id="txtValorTotalVC"
+            aria-describedby="nombreHelp" placeholder="Valor Total" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Valor Total Cargo fijo con descuento grupal si aplica + Cuota Mensual del Equipo</small>
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Selección Venta WebPay -->
+
+
+<div class="row" id="VentaWebPay" style="display:none;">
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaPreferencialWP">Valor Preferencial WebPay:</label>
+        <input type="text" required class="form-control" id="txtCuotaPreferencialWP"
+            aria-describedby="nombreHelp" placeholder="$ 99.990" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Valor Preferencial</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaInicialWP">Cuota Inicial:</label>
+        <input type="text" required class="form-control" id="txtCuotaInicialWP"
+            aria-describedby="nombreHelp" placeholder="$ 0" maxlength="60" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Cuota Inicial</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtCuotaMensualWP">Cuota Mensual:</label>
+        <input type="text" required class="form-control" id="txtCuotaMensualWP"
+            aria-describedby="nombreHelp" placeholder="$ 4990" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Cuota Mensual</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtFechaVencimientoBoletaWP">Fecha vencimiento Boleta:</label>
+        <input type="date" required class="form-control" id="txtFechaVencimientoBoletaWP"
+            aria-describedby="nombreHelp" placeholder="Fecha vencimiento" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Fecha vencimiento Boleta</small>
+    </div>
+</div>
+
+
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="txtValorTotalWP">Valor Total WebPay:</label>
+        <input type="text" required class="form-control" id="txtValorTotalWP"
+            aria-describedby="nombreHelp" placeholder="Valor Total" maxlength="50" minlength="1">
+        <small id="nombreHelp" class="form-text text-muted">Valor Total Cargo fijo con descuento grupal si aplica + Cuota Mensual del Equipo</small>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+   <script>
+function ModoVentaOnChange(sel) {
+      if (sel.value=="Venta en Cuotas"){
+           divC = document.getElementById("VentaenCuotas");
+           divC.style.display = "";
+
+           divT = document.getElementById("VentaWebPay");
+           divT.style.display = "none";
+
+      }else{
+
+           divC = document.getElementById("VentaenCuotas");
+           divC.style.display="none";
+
+           divT = document.getElementById("VentaWebPay");
+           divT.style.display = "";
+      }
+}
+
+   </script>
+
+
+
+
+
+<!-- Boton Generar script-->
+
+
+<br>
+<div class="text-center">
+    <a class="btn btn-success btn-lg" onclick="changeLabel()">Generar Script</a>
+</div>
+
+
+<!-- Texto al cliente -->
+
+</div>
+<script type="text/javascript">
+    function changeLabel() {
+        
+// Variables
+        var nombre = document.getElementById('txtNombreCliente').value;
+        var rutCli = document.getElementById('txtRutCliente1').value +"-"+ document.getElementById('txtRutCliente2').value;
+        var NumSerie = document.getElementById('txtNumSerie').value;
+        var correoCli = document.getElementById('txtCorreoCli').value;
+        var NumeroContacto="+56"+document.getElementById('txtTelefonoContacto').value;
+    
+
+        var ModoVentaCB = document.getElementById('ModoVentaCB').value;
+
+
+        var MarcaEquipo =document.getElementById('txtMarcaEquipo').value;
+        var ModeloEquipo =document.getElementById('txtModeloEquipo').value;
+        var ColorEquipo =document.getElementById('txtColorEquipo').value;
+
+
+        var CuotaPreferencialVC  =document.getElementById('txtCuotaPreferencialVC').value;
+        var CuotaInicialVC =document.getElementById('txtCuotaInicialVC').value;
+        var CuotaMensualVC =document.getElementById('txtCuotaMensualVC').value;
+        var FechaVencimientoBoletaVC =document.getElementById('txtFechaVencimientoBoletaVC').value;
+        var ValorTotalVC =document.getElementById('txtValorTotalVC').value;
+
+
+        var CuotaPreferencialWP  =document.getElementById('txtCuotaPreferencialWP').value;
+        var CuotaInicialVC =document.getElementById('txtCuotaInicialVC').value;
+        var CuotaMensualWP =document.getElementById('txtCuotaMensualWP').value;
+        var FechaVencimientoBoletaWP =document.getElementById('txtFechaVencimientoBoletaWP').value;
+        var FechaVencimientoBoletaWP =document.getElementById('txtFechaVencimientoBoletaWP').value;
+
+
+
+        var ModoVenta="";
+
+
+       
+
+
+
+//Mensaje
+
+
+
+
+        var mensajeVentaCuotas = " <strong>Venta en Cuotas:</strong> Entonces, <strong>" + nombre +"</strong>, rut <strong>"+rutCli+"</strong> con número de serie <strong>"+NumSerie+"</strong> y correo electrónico <strong>"+correoCli+"</strong>. Confirmas que para la línea <strong>"+NumeroContacto+"</strong> aceptas el equipo Marca: <strong>"+MarcaEquipo+"</strong>  Modelo: <strong>"+ModeloEquipo+"</strong>  Color: <strong>"+ColorEquipo+"</strong> en modo venta en cuotas, con un valor preferencial de <strong>$ "+CuotaPreferencialWP+"</strong>, cuya cuota inicial es de <strong>$ "+CuotaInicialVC+"</strong>, la cual será cargada en tu próxima facturación, además tiene una cuota mensual de <strong>$ "+CuotaMensualVC+"</strong> que será incluida en tu boleta por 18 meses, es decir sumado al plan pagarás un valor total de <strong>$ "+ValorTotalVC+"</strong> (Cargo fijo con descuento grupal si aplica, más cuota mensual equipo, más cuota inicial de equipo) en la boleta con fecha de vencimiento para el <strong>$ "+FechaVencimientoBoletaVC+"</strong>. En la siguiente facturación  pagarás un valor mensual total de <strong>$ "+ValorTotalVC+"</strong> (Cargo fijo con descuento grupal si aplica, más cuota mensual equipo), esto por los 17 meses restantes desde la boleta con fecha de vencimiento para el <strong> "+FechaVencimientoBoletaVC+"</strong>. "
+
+
+
+
+        var mensajeVentaWebPay = " <strong>Venta WebPay:</strong> Entonces, <strong>" + nombre +"</strong>, rut <strong>"+rutCli+"</strong> con número de serie <strong>"+NumSerie+"</strong> y correo electrónico <strong>"+correoCli+"</strong>. Confirmas que para la línea <strong>"+NumeroContacto+"</strong> aceptas el equipo Marca: <strong>"+MarcaEquipo+"</strong>  Modelo: <strong>"+ModeloEquipo+"</strong>  Color: <strong>"+ColorEquipo+"</strong> en modo venta, cuyo valor preferencial es de  <strong>$ "+CuotaPreferencialWP+"</strong>, El pago lo debes realizar dentro de 24 hrs hábiles, tiempo que se mantiene la reserva del equipo a través del link que mandaremos a tu correo. Al realizar el pago el quipo pasa a ser tuyo. ";
+
+
+
+//Finscript
+
+        var finscript ="<strong><br/> <br/>¿Aceptas las condiciones de la venta? [Cliente debe responder Sí /Acepto/Confirmo]</strong>. <strong>" + nombre +"</strong> ¿Te queda alguna duda? Te recuerdo que fuiste atendido por [Ejecutivo]. Recuerda que puedes pagar tu cuenta de forma automática y segura suscribiendo tu boleta WOM a PAT. Infórmate de nuestros canales de atención a través del 103. Te agradezco la permanencia en Wom, que tengas un(a) excelente [día – tarde – noche], hasta luego.";
+
+
+
+    switch (ModoVentaCB){
+            case "Venta en Cuotas":
+                ModoVenta= mensajeVentaCuotas + finscript;
+                break;          
+            case "Venta WebPay":
+                ModoVenta= mensajeVentaWebPay + finscript;
+                break;  
+            }
+
+
+
+
+
+
+// // Retiro
+
+//         if(document.getElementById("Direccionretiro").checked==true) {
+
+//         retiro = " <br/>Lo ofertado será despachado a  <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
+
+
+//         }   
+//         else if(document.getElementById("Recibeotro").checked==true) {
+// 			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta. Tus servicio será despachado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+"</strong> , y tus números de contacto son: <strong>"+ NumeroContacto1+"</strong> y <strong>"+NumeroContacto2+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
+// 		}	
+// 		else{
+// 			despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta. Tus servicio será despachado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+"</strong> , y tus números de contacto son: <strong>"+ NumeroContacto1+"</strong> y <strong>"+NumeroContacto2+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
+// 		}
+		
+		
+
+// Mensaje
+
+		mensaje = ModoVenta;
+        
+        document.getElementById('txtRespuesta').innerHTML = mensaje;
+    } 
+
+
+</script>
+
+
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+
+<!-- Titulo Comunicado al cliente-->
+
+<div class="highlight-blue" style="background-color: #351a51">
+    
+        <div class="container text-justify">
+            <h2 class="text-center">Comunicado al cliente:</h2>
+            <p align="justify" id="txtRespuesta">Contrato de Recambio de equipo a leer por el ejecutivo...</p>
+
+  <!-- Boton borrar script -->         
+        <a class="btn btn-warning" onclick="clearAll()">Borrar Script</a>
+        </div>
+        
+   
+</div>
+
+<script>
+function clearAll(){
+document.getElementById("txtRespuesta").innerHTML="";
+}
+</script> 
+
+
+
+</form>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<div>
+<br><br>
+<div class="text-center"> <a href="https://docs.google.com/forms/d/1WxvXW7Wo1i_cRZpSY2oGBrjABluGEo9st4LwpL0c98s/edit" target="_blank"><h7><b>DEJANOS TUS COMENTARIOS AQUÍ<h7></b></a></div><br>
+<div class="text-center" style="color: #351a51">
+<h8>Designed by IT Chile - ApexAmerica<h8>
+</div>  
+</body>
+
+</html>

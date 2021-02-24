@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
-                    <h3 class="text-center" style="color: #351a51">PORTABILIDAD CON PLAN GRUPAL</h3>
+                    <h3 class="text-center" style="color: #351a51">Portabilidad Oferta Grupal</h3>
                     <br>
 					<div class="col-sm-1"></div>
                     <div class="row">
@@ -111,7 +111,7 @@
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label for="txtTelefonoContacto2">Número de contacto 2:</label>
-								<input required type="tel" class="form-control" id="txtTelefonoContacto2"
+								<input type="tel" class="form-control" id="txtTelefonoContacto2"
 									aria-describedby="numberContact2Help" maxlength="9" placeholder="987654321 ó 712310134">
 									 <small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
 							</div>
@@ -126,108 +126,318 @@
 						</div>
 					</div>
 					
-					<!-- Dirección de despacho-->
+					
 
-					<div class="row">
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label for="txtDireccionEntrega">Dirección de despacho:</label>
-									<input type="tel" required class="form-control" id="txtDireccionEntrega"
-										aria-describedby="direccionHelp" minlength="10" placeholder="Av. siempre viva">
-									<small id="direccionHelp" class="form-text text-muted">Dirección/Calle/Pasaje</small>
-								</div>
-							</div>
-							<div class="col-sm-2">
-								<div class="form-group">
-									<label for="txtNumeroDireccion">Número:</label>
-									<div class="input-group mb-2">
-										<div class="input-group-prepend">
-											<div class="input-group-text">#</div>
-										</div>
-										<input required minlength="2" maxlength="7" type="text" class="form-control" id="txtNumeroDireccion"  aria-describedby="numeroHelp" placeholder="916">
-										</div>
-							   </div>
-							</div>
-							<div class="col-sm-3">
-								<div class="form-group">
-									<label for="txtRecepciona">Comuna:</label>
-									<input required type="text" class="form-control" id="txtComuna" aria-describedby="ComunaHelp" maxlength="20"
-										placeholder="Providencia">
-									<small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
-								</div>
-							</div>
-							<div class="col-sm-3">
-									 <div class="form-group">
-													<label for="regiones">Región:</label>
-													<select required class="form-control" id="regiones">
-														<option selected disabled value="">Seleccione una región</option>
-														<option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
-														<option value="Región de Tarapaca">Región de Tarapaca</option>
-														<option value="Región de Antofagasta">Región de Antofagasta</option>
-														<option value="Región de Atacama">Región de Atacama</option>
-														<option value="Región de Coquimbo">Región de Coquimbo</option>
-														<option value="Región de Valparaiso">Región de Valparaiso</option>
-														<option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
-														<option value="Región del Maule">Región del Maule</option>
-														<option value="Región de Ñuble">Región de Ñuble</option>
-														<option value="Región del Biobío">Región del Biobío</option>
-														<option value="Región de La Araucania">Región de La Araucania</option>
-														<option value="Región de Los Rios">Región de Los Rios</option>
-														<option value="Región de Los Lagos">Región de Los Lagos</option>
-														<option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
-														<option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
-														<option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago
-														</option>
-													</select>
-									</div>
-							</div>
-					</div>
 
-					<!-- Otro Receptor -->
 
-					<div class="row">
+<!-- Dirección de despacho-->
 
-							<div class="col-sm-2" style="padding-top: 30px">
-												<label class="checkbox"><input type="checkbox" onclick="Quienrecibe()" id="Recibeotro"
-														value=""><strong> ¿Recibe otra persona?</strong></label>
-							</div>
-							<div class="col-sm-4">
-							<div class="form-group">
-												<label for="txtRecept">Nombre de quien recibe:</label>
-												<input required type="text" class="form-control" disabled id="txtRecept" aria-describedby="receptHelp" maxlength="40"
-												placeholder="Ana María Cortez Pérez">
-											<small id="receptHelp" class="form-text text-muted">Nombre completo</small>
-							</div>
-					</div>
-							<div class="col-sm-3">
-									<div class="form-group">
-											<label for="txtRutReceptor1">Rut de quien recibe:</label>
-									<div class="row">
-										<div class="col-sm-7">
-												<input type="text" required class="form-control" disabled id="txtRutReceptor1"
-												aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
-										</div> 
-									 <div class="col-sm-4">
-												<input type="text" required class="form-control" disabled id="txtRutReceptor2"
-												aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
-										</div>
-									</div>
-								<small id="RutHelp" class="form-text text-muted">No acepta N° de pasaporte</small>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="form-group">
-								<label for="txtTelefonoContacto1">Teléfono de quien recibe:</label>
-									<input required type="tel" class="form-control" disabled id="txtTelefonoReceptor"maxlength="9" placeholder="987654321 ó 712310134">
-									<small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
-								</div>
-						</div>
-					</div>
+<div class="row">
+
+    <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Despacho()" id="Direcciondespacho"
+                                    value=""><strong> Despacho </strong></label>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtDireccionEntrega">Dirección de despacho:</label>
+                <input type="tel" required class="form-control" disabled id="txtDireccionEntrega"
+                    aria-describedby="direccionHelp" minlength="10" placeholder="Av. siempre viva">
+                <small id="direccionHelp" class="form-text text-muted">Dirección/Calle/Pasaje</small>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtNumeroDireccion">Número:</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">#</div>
+                    </div>
+                    <input required minlength="2" maxlength="7" type="text" class="form-control" disabled id="txtNumeroDireccion"  aria-describedby="numeroHelp" placeholder="916">
+                    </div>
+           </div>
+        </div>
+
+</div>
+<div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtRecepciona">Comuna:</label>
+                <input required type="text" class="form-control" disabled id="txtComuna" aria-describedby="ComunaHelp" maxlength="20"
+                    placeholder="Providencia">
+                <small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
+            </div>
+        </div>
+    
+
+        <div class="col-sm-5">
+                 <div class="form-group">
+
+                                <label for="regiones">Región</label>
+                                <select required class="form-control" disabled id="regiones">
+                                    <option selected disabled value="">Seleccione una región</option>
+                                    <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
+                                    <option value="Región de Tarapaca">Región de Tarapaca</option>
+                                    <option value="Región de Antofagasta">Región de Antofagasta</option>
+                                    <option value="Región de Atacama">Región de Atacama</option>
+                                    <option value="Región de Coquimbo">Región de Coquimbo</option>
+                                    <option value="Región de Valparaiso">Región de Valparaiso</option>
+                                    <option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="Región del Maule">Región del Maule</option>
+                                    <option value="Región de Ñuble">Región de Ñuble</option>
+                                    <option value="Región del Biobío">Región del Biobío</option>
+                                    <option value="Región de La Araucania">Región de La Araucania</option>
+                                    <option value="Región de Los Rios">Región de Los Rios</option>
+                                    <option value="Región de Los Lagos">Región de Los Lagos</option>
+                                    <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
+                                    <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
+                                    <option value="Región Metropolitana de Santiago">Región Metropolitana
+                                    </option>
+                                </select>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+            <div class="form-group">
+                <label for="txtReferencia">Referencia</label>
+                <input type="text" class="form-control" id="txtreferencia" aria-describedby="ReferenciaHelp" maxlength="110"
+                    placeholder="Casa Esquina">
+                <small id="ReferenciaHelp" class="form-text text-muted">Referencia de la dirección.</small>
+            </div>
+        </div>
+
+    </div>
+
+
+
+                    <script>
+                        function Despacho() {
+                            if (document.getElementById("Direcciondespacho").checked) 
+                            {
+                                //document.getElementById("Direccionretiro").disabled=true;
+                                document.getElementById("txtDireccionEntrega").removeAttribute('disabled');
+                                document.getElementById("txtNumeroDireccion").removeAttribute('disabled');
+                                document.getElementById("txtComuna").removeAttribute('disabled');
+                                document.getElementById("regiones").removeAttribute('disabled');
+                                
+                                
+                            } else 
+                            {
+                                //ocument.getElementById("Direccionretiro").removeAttribute('disabled');
+                                document.getElementById("txtDireccionEntrega").disabled=true;
+                                document.getElementById("txtNumeroDireccion").disabled=true;
+                                document.getElementById("txtComuna").disabled=true;
+                                document.getElementById("regiones").disabled=true;
+                                document.getElementById("txtDireccionEntrega").value="";
+                                document.getElementById("txtNumeroDireccion").value="";
+                                document.getElementById("txtComuna").value="";
+                                document.getElementById("regiones").value="";
+                                
+                            }
+                        };
+                    </script>
+
+<!-- Retiro
+
+
+<div class="row">
+
+    <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Retiro()" id="Direccionretiro"
+                                    value=""><strong> Retiro </strong></label>
+        </div>
+
+
+
+<script type="text/javascript">
+
+function cambiar() {
+    var x = document.getElementById("sucursal");
+    var vacio = new Option("Elige una opción","");
+    x.options[x.options.length] = vacio;
+    x.selectedIndex = vacio;
+}
+function mostrar(){
+    var region = document.getElementById("region").value;
+    var x = document.getElementById("sucursal");    
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x.options[i].id == region){
+            x.options[i].style.display = 'block';
+        } else {
+            x.options[i].style.display = 'none';
+        }
+    }
+    if (region == 2 || region == null) {
+        var vacio = new Option("Elige una opción","");
+        x.options[x.options.length] = vacio;
+        x.selectedIndex = vacio;
+    }
+}
+</script>
+
+
+
+<div class="col-sm-5">
+    <form method="get" action="try.html" >
+            
+        <label for="region">Region</label>  
+        <select name="region" id="region" onchange="cambiar()" onClick="mostrar()" required class="form-control" disabled id="regiones">
+
+                                    
+                                    <option selected value=""> Seleccione una región </option>
+                                    <option value="1">Región de Arica a Parinacota</option> 
+                                    <option value="2">Región de Tarapaca</option>
+                                    <option value="3">Región de Antofagasta</option>
+                                    <option value="4">Región de Atacama</option> 
+                                    <option value="5">Región de Coquimbo</option>
+                                    <option value="6">Región de Valparaiso</option>
+                                    <option value="7">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="8">Región del Maule</option>
+                                    <option value="9">Región de Ñuble</option> 
+                                    <option value="10">Región del Biobío</option>
+                                    <option value="11">Región de La Araucania</option>  
+                                    <option value="12">Región de Los Rios</option> 
+                                    <option value="13">Región de Los Lagos</option> 
+                                    <option value="14">Región de Aysén del G. Carlos Ibañez del Campo</option> 
+                                    <option value="15">Región de Magallanes y de la Antártica Chilena</option> 
+                                    <option value="16">Región Metropolitana de Santiago
+                                    </option>
+   
+        </select>
+        <small id="RegionHelp" class="form-text text-muted">Región a la que será enviado.</small>
+    </div>
+</div>
+
+
+ Sucursal para retiro
+
+ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Region del maule value 8, la sucursal debe tener el id 8
+ 
+
+<div class="row">
+
+        <div class="col-sm-12">
+            
+        <label for="Sucursal">Sucursal</label> 
+        <select name="sucursal" id="sucursal" required class="form-control" disabled id="sucursal">
+            <option selected value=""> Seleccione una Sucursal </option>
+    
+            <option value="Región de Antofagasta/Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs" id="3" style='display:none;'>Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs</option>
+
+            <option value="Región de Coquimbo/Comuna La Serena/Sucursal Balmaceda/Calle Balmaseda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs" id="5" style='display:none;'>Comuna La Serena/Sucursal Balmaceda/Calle Balmaceda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs</option>
+            
+            <option value="Región de Valparaiso/Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs" id="6" style='display:none;'>Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs</option>
+            
+            <option value="Región de Valparaiso/San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs" id="6" style='display:none;'>San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs</option>
+            
+            <option value="Region del Libertador Bernado O'Higgins/Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="7" style='display:none;'>Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región del Maule/Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs" id="8" style='display:none;'>Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs</option>
+            
+            <option value="Región del Biobío/Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs" id="10" style='display:none;'>Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs</option>
+
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="16" style='display:none;'>Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs" id="16" style='display:none;'>Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs" id="16" style='display:none;'>Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs</option>
+            
+            
+        </select>
+        <small id="SucursalHelp" class="form-text text-muted">Sucursal a la que será enviado.</small>
+                
+        </div>
+    </div>
+        
+</form>
+
+
+
+
+                    <script>
+                        function Retiro() {
+                            if (document.getElementById("Direccionretiro").checked) 
+                            {
+                                document.getElementById("Direcciondespacho").disabled=true;
+                                document.getElementById("Recibeotro").disabled=true;
+                                document.getElementById("region").removeAttribute('disabled');
+                                document.getElementById("sucursal").removeAttribute('disabled');
+                                
+                                
+                                
+                            } else 
+                            {   
+                                document.getElementById("Direcciondespacho").removeAttribute('disabled');
+                                document.getElementById("Recibeotro").removeAttribute('disabled');
+                                document.getElementById("region").disabled=true;
+                                document.getElementById("region").value="";
+                                document.getElementById("sucursal").disabled=true;
+                                document.getElementById("sucursal").value="";
+                                                                
+                            }
+                        };
+                    </script>
+
+-->
+
+<!-- Otro Receptor -->
+
+<div class="row">
+
+        <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Quienrecibe()" id="Recibeotro"
+                                    value=""><strong> ¿Recibe otra persona?</strong></label>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+                            <label for="txtRecept">Nombre de quien recibe:</label>
+                            <input required type="text" class="form-control" disabled id="txtRecept" aria-describedby="receptHelp" maxlength="40"
+                            placeholder="Ana María Cortez Pérez">
+                        <small id="receptHelp" class="form-text text-muted">Nombre completo</small>
+        </div>
+</div>
+        <div class="col-sm-3">
+                <div class="form-group">
+                        <label for="txtRutReceptor1">Rut de quien recibe:</label>
+                <div class="row">
+                    <div class="col-sm-7">
+                            <input type="text" required class="form-control" disabled id="txtRutReceptor1"
+                            aria-describedby="rutHelp" placeholder="12345678" maxlength="8" minlength="7">
+                    </div> 
+                 <div class="col-sm-4">
+                            <input type="text" required class="form-control" disabled id="txtRutReceptor2"
+                            aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
+                    </div>
+                </div>
+            <small id="RutHelp" class="form-text text-muted">No acepta N° de pasaporte</small>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label for="txtTelefonoContacto1">Teléfono de quien recibe:</label>
+                <input required type="tel" class="form-control" disabled id="txtTelefonoReceptor"maxlength="9" placeholder="987654321 ó 712310134">
+                <small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
+            </div>
+    </div>
+</div>
 
                     <script>
                         function Quienrecibe() {
                             if (document.getElementById("Recibeotro").checked) 
                             {
+                                //document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtRecept").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor1").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor2").removeAttribute('disabled');
@@ -236,11 +446,12 @@
                                 
                             } else 
                             {
+                                //document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtRecept").disabled=true;
                                 document.getElementById("txtRutReceptor1").disabled=true;
                                 document.getElementById("txtRutReceptor2").disabled=true;
                                 document.getElementById("txtTelefonoReceptor").disabled=true;
-								document.getElementById("txtRecept").value="";
+                                document.getElementById("txtRecept").value="";
                                 document.getElementById("txtRutReceptor1").value="";
                                 document.getElementById("txtRutReceptor2").value="";
                                 document.getElementById("txtTelefonoReceptor").value="";
@@ -248,8 +459,9 @@
                             }
                         };
                     </script>
+
 					
-					<!-- Datos de cuenta socia a modificar o modificada-->
+<!-- Datos de cuenta socia a modificar o modificada-->
 
 					<div class="row">    
 						<div class="col-sm-4">
@@ -269,10 +481,16 @@
 								<label for="SelectPlan">Plan Número Socio:</label>
 								<select class="form-control" id="SelectPlan" aria-describedby="PlanHelp">
 									<option selected disabled value="">Seleccione plan Número Socio</option>
-									<option value="25gigas">Plan WOM Grupal 25 Gigas</option>
-									<option value="35gigas">Plan WOM Grupal 35 Gigas</option>
-									<option value="45gigas">Plan WOM Grupal 45 Gigas</option>
-									<option value="GigasLibres">Grupal Gigas Libres</option>
+						            <option value="40gigas">Plan Acumula 40 Gigas</option>
+                                    <option value="PlanACUMULA60G">Plan Acumula 60 Gigas</option>
+                                    <option value="PlanACUMULA80G">Plan Acumula 80 Gigas</option>
+                                    <option value="PlanACUMULA100G">Plan Acumula 100 Gigas</option>
+                                    <option value="WomersLibre">Plan WOMERS Libres</option>
+                        <option disabled value="">~Banda Ancha Móvil~</option>
+                                    <option value="BAM 40 Gigas">Plan BAM Grupal 40 Gigas</option>
+                                    <option value="BAM 60 Gigas">Plan BAM Grupal 60 Gigas</option>
+                                    <option value="BAM 90 Gigas">Plan BAM Grupal 90 Gigas</option>
+                                    <option value="BAM 120 Gigas">Plan BAM Grupal 120 Gigas</option>
 								</select>
 							</div>
 						</div>
@@ -321,6 +539,7 @@
                                     <option value="Falabella Móvil">Falabella Móvil</option>
                                     <option value="Simple">Simple</option>
                                     <option value="Grupo GTD">Grupo GTD</option>
+                                    <option value="Grupo GTD">Mundo movil</option>
                                 </select>
                                 <small id="companyHelp" for="companyAnterior1" class="form-text text-muted">Seleccione la
                                     compañia de origen</small>
@@ -332,23 +551,24 @@
                                 <label for="SelectPlan">Plan a contratar:</label>
                                 <select required class="form-control" id="SelectPlan1" aria-describedby="PlanHelp">
                                     <option selected disabled value="">Seleccione un Plan</option>
-                                    <option value="25gigas">Plan WOM Grupal 25 Gigas</option>
-									<option value="35gigas">Plan WOM Grupal 35 Gigas</option>
-									<option value="45gigas">Plan WOM Grupal 45 Gigas</option>
-									<option value="GigasLibres">Grupal Gigas Libres</option>
-                                </select>
+                                    <option value="40gigas">Plan Acumula 40 Gigas</option>
+                                    <option value="PlanACUMULA60G">Plan Acumula 60 Gigas</option>
+                                    <option value="PlanACUMULA80G">Plan Acumula 80 Gigas</option>
+                                    <option value="PlanACUMULA100G">Plan Acumula 100 Gigas</option>
+                                    <option value="WomersLibre">Plan WOMERS Libres</option>
+                                 </select>
                              
                             </div>
                         </div>
                     </div>
 					
 					
-					<div class="row">
-						<div class="col-sm-12">
-							<label class="checkbox"><input type="checkbox" onclick="agregarOtro()" id="otroNumero"
-								value=""><strong> ¿Portar otro número?</strong></label>
-						</div>
-					</div>
+<div class="row">
+	<div class="col-sm-12">
+		<label class="checkbox"><input type="checkbox" onclick="agregarOtro()" id="otroNumero"
+				value=""><strong> ¿Portar otro número?</strong></label>
+		</div>
+</div>
 					
 					<div class="row">
 						<div class="col-sm-3">
@@ -386,6 +606,7 @@
                                     <option value="Falabella Móvil">Falabella Móvil</option>
                                     <option value="Simple">Simple</option>
                                     <option value="Grupo GTD">Grupo GTD</option>
+                                    <option value="Grupo GTD">Mundo movil</option>
                                 </select>
                                 <small id="companyHelp" for="companyAnterior1" class="form-text text-muted">Seleccione la
                                     compañia de origen</small>
@@ -397,10 +618,21 @@
                                 <label for="SelectPlan">Plan a contratar:</label>
                                 <select disabled required class="form-control" id="SelectPlan2" aria-describedby="PlanHelp">
                                     <option selected disabled value="">Seleccione un Plan</option>
-                                    <option value="25gigas">Plan WOM Grupal 25 Gigas</option>
-									<option value="35gigas">Plan WOM Grupal 35 Gigas</option>
-									<option value="45gigas">Plan WOM Grupal 45 Gigas</option>
-									<option value="GigasLibres">Grupal Gigas Libres</option>
+                                    <option
+                            value="40gigas2">
+                            Plan Acumula 40 Gigas</option>
+                        <option
+                            value="PlanACUMULA60G2">
+                            Plan Acumula 60 Gigas</option>
+                        <option
+                            value="PlanACUMULA80G2">
+                            Plan Acumula 80 Gigas</option>
+                        <option
+                            value="PlanACUMULA100G2">
+                            Plan Acumula 100 Gigas</option>
+                        <option
+                            value="WomersLibre2">
+                            Plan WOMERS Libres</option>
                                 </select>
                             </div>
                         </div>
@@ -432,6 +664,51 @@
                         };
                     </script>
 
+
+
+
+
+<div class="row">
+        <div class="col-sm-2" style="padding-top: 10px">
+            <label class="checkbox"><input type="checkbox" id="Promocion" onclick="Promo()" value=""> <b>¿Aplica promoción?</b></label>
+        </div>
+
+</div>
+
+
+
+<script>
+                        function Promo() {
+
+                            document.getElementById("Promocion").value="";
+
+                    if ((document.getElementById("Promocion").checked==true) && (document.getElementById("otroNumero").checked==false)){
+
+                            document.getElementById("Promocion").value="<strong> QUE TENDRA UN 50% DESCUENTO POR 12 MESES (Aplica Promoción 50 % descuento)</strong>";
+
+                    } else if ((document.getElementById("Promocion").checked==true) && (document.getElementById("otroNumero").checked==true)){
+
+                            document.getElementById("Promocion").value="<strong> LA CUAL SERA GRATIS POR 12 MESES (Aplica Promoción 2x1 por 12 meses)</strong>";
+
+                    } else {
+
+                            document.getElementById("Promocion").value="";
+
+
+                    }       
+             };
+    </script>
+
+
+
+
+
+
+
+
+
+
+<!-- Boton Generar script -->
                     <br>
                     <div class="text-center">
                         <a class="btn btn-success btn-lg" onclick="changeLabel()">Generar Script</a>
@@ -441,6 +718,7 @@
 						function changeLabel() {
 							var intro = "Has tomado una gran decisión!! y como no contamos con letra chica a continuacion escucharás una grabación que dura 1 minuto y 30 segundos con las condiciones que respaldan tu contratación, por lo que te pido que escuches atentamente y no cortes ya que yo retomaré tu llamado para resolver tus dudas y realizar un breve resumen de la contratación realizada.<br/><br/> <strong>[EJECUTIVO MARCA EL 4407]</strong><br/><br/>";
 
+// Variables
 							var nombre = document.getElementById('txtNombreCliente').value;
 							var rutCli = document.getElementById('txtRutCliente1').value +"-"+ document.getElementById('txtRutCliente2').value;
 							var NumeroContacto1 = "+56"+document.getElementById('txtTelefonoContacto1').value;
@@ -450,9 +728,16 @@
 							var numero = document.getElementById('txtNumeroDireccion').value;
 							var comuna = document.getElementById('txtComuna').value;
 							var region = document.getElementById('regiones').value;
+                            var referencia = document.getElementById('txtreferencia').value;
 							var nomReceptor = document.getElementById('txtRecept').value;
 							var rutReceptor = document.getElementById('txtRutReceptor1').value+"-"+document.getElementById("txtRutReceptor2").value;
 							var telReceptor = document.getElementById("txtTelefonoReceptor").value;
+							//var sucursal =document.getElementById('sucursal').value;
+        					var TelReceptor =document.getElementById('txtTelefonoReceptor').value;
+        					var receptor = document.getElementById('txtRecept').value;
+        					var RutReceptor = document.getElementById('txtRutReceptor1').value+"-"+document.getElementById("txtRutReceptor2").value;
+        					var retiro="";
+        					var despacho="";
 							
 							var nSocio = "+56"+document.getElementById('txtTelefonoGrupal').value;
 							var planSocio = document.getElementById('SelectPlan').value;
@@ -468,21 +753,43 @@
 							var OldCompany2= " y "+document.getElementById("companyAnterior2").value;
 							var planPort2 = document.getElementById('SelectPlan2').value;
 							
-							var nomPlan0 ="Plan WOM Grupal 25 Gigas";
-							var cfPlan0= "$12.990";
-							var cfrPlan0= "$10.990";
-							
-							var nomPlan1 ="Plan WOM Grupal 35 Gigas";
-							var cfPlan1= "$15.990";
-							var cfrPlan1= "$12.990";
-							
-							var nomPlan2 ="Plan WOM Grupal 45 Gigas";
-							var cfPlan2= "$19.990";
-							var cfrPlan2= "$15.990";
-							
-							var nomPlan3 ="Grupal Gigas Libres";
-							var cfPlan3= "$25.990";
-							var cfrPlan3= "$19.990";
+							var nomPlan0 ="Plan Grupal Acumula 40 Gigas";
+                            var cfPlan0= "$11.990";
+                            var cfrPlan0= "$9.990";
+                        
+                            var nomPlan1 ="Plan Grupal Acumula 60 Gigas";
+                            var cfPlan1= "$13.990";
+                            var cfrPlan1= "$11.990";
+                        
+                            var nomPlan2 ="Plan grupal Acumula 80 Gigas";
+                            var cfPlan2= "$16.990";
+                            var cfrPlan2= "$13.990";
+                        
+                            var nomPlan3 ="Plan Grupal Acumula 100 Gigas";
+                            var cfPlan3= "$19.990";
+                            var cfrPlan3= "$16.990";
+
+                            var nomPlan4 ="Plan Grupal WOMERS Gigas Libres";
+                            var cfPlan4= "$25.990";
+                            var cfrPlan4= "$19.990";
+
+                            //BAM
+
+                            var nomPlan5 ="Plan BAM Grupal 40 Gigas";
+                            var cfPlan5= "$12.990";
+                            var cfrPlan5= "$10.990";
+                        
+                            var nomPlan6 ="Plan BAM Grupal 60 Gigas";
+                            var cfPlan6= "$15.990";
+                            var cfrPlan6= "$12.990";
+                        
+                            var nomPlan7 ="Plan BAM Grupal 90 Gigas";
+                            var cfPlan7= "$19.990";
+                            var cfrPlan7= "$15.990";
+                        
+                            var nomPlan8 ="Plan BAM Grupal 120 Gigas";
+                            var cfPlan8= "$25.990";
+                            var cfrPlan8= "$19.990";
 
 											
 							var lineaAsoc="";
@@ -498,91 +805,148 @@
 							var contrato="";
 							var cedula="";
 							var recomendaciones="";
+
+                            var promo1 = document.getElementById('Promocion').value;
+
 							
 							var mensaje = intro+ "Ahora terminaremos con un breve resumen del plan que te llevas por lo que al final te pido confirmar con un sí:<br/><strong> Tu nombre completo es: "+ nombre +", tu rut es: "+ rutCli +", tu correo electrónico es "+ correoCli +", tu número de contacto es: "+ NumeroContacto1+NumeroContacto2+".</strong>";
         												
 							switch(planSocio){
-							  case "25gigas":
-								lineaAsoc =" Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan0+" de valor mensual "+cfPlan0+" el cual tendrá una rebaja en el cargo fijo, por un valor de "+cfrPlan0+"</strong>.<br/><br/>";	
-								break;
-							  case "35gigas":
-								lineaAsoc =" Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan1+" de valor mensual "+cfPlan1+" el cual tendrá una rebaja en el cargo fijo, por un valor de "+cfrPlan1+"</strong>.<br/><br/>";	
-								break;
-							  case "45gigas":
-								lineaAsoc =" Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan2+" de valor mensual "+cfPlan2+" el cual tendrá una rebaja en el cargo fijo por un valor de "+cfrPlan2+"</strong>.<br/><br/>";	
-								break;
-							  default:
-								lineaAsoc =" Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan3+" de valor mensual "+cfPlan3+" el cual tendrá una rebaja en el cargo fijo por un valor de "+cfrPlan3+"</strong>.<br/><br/>";	
+							  case "40gigas":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan0+" de valor mensual "+cfPlan0+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan0+".</strong><br/><br/>";    
+                                break;
+                            case "PlanACUMULA60G":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan1+" de valor mensual "+cfPlan1+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan1+".</strong><br/><br/>";    
+                                break;
+                            case "PlanACUMULA80G":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan2+" de valor mensual "+cfPlan2+" el cual tendrá una rebaja en el cargo fijo pagando un valor de "+cfrPlan2+".</strong><br/><br/>"; 
+                                break;
+                            case "PlanACUMULA100G":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan3+" de valor mensual "+cfPlan3+" el cual tendrá una rebaja en el cargo fijo pagando un valor de "+cfrPlan3+".</strong><br/><br/>"; 
+                                break;
+                            case "WomersLibre":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan4+" de valor mensual "+cfPlan4+" el cual tendrá una rebaja en el cargo fijo pagando un valor de "+cfrPlan4+".</strong><br/><br/>"; 
+                                break;
+
+                                //BAM
+
+                                case "BAM 40 Gigas":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan5+" de valor mensual "+cfPlan5+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan5+".</strong><br/><br/>";    
+                                break;
+                            case "BAM 60 Gigas":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan6+" de valor mensual "+cfPlan6+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan6+".</strong><br/><br/>";    
+                                break;
+                            case "BAM 90 Gigas":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan7+" de valor mensual "+cfPlan7+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan7+".</strong><br/><br/>";    
+                                break;
+                            case "BAM 120 Gigas":
+                                lineaAsoc ="<br/>Adicional, <strong>el número "+nSocio+" quedará con el "+nomPlan8+" de valor mensual "+cfPlan8+" el cual tendrá una rebaja en el cargo fijo, pagando un valor de "+cfrPlan8+".</strong><br/><br/>";
+
 							}
-													
-														
+							
+
+                           														
 						//Descripción de planes y resumen a contratar
 																	
 						if(document.getElementById("otroNumero").checked==true){
 							switch (document.getElementById("SelectPlan1").value){
-								case "25gigas":
-									infoPlan1 = " Para el <strong>PLAN WOM GRUPAL 25 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan0 +". incluye 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Facebook, Twitter, Instagram y Snapchat para siempre en 4G de WOM sin ningún costo adicional. Como plan controlado si quedas sin minutos recuerda que puedes recargar y se descontarán $50 por minuto y SMS y en caso de usar todos tus GIGAS puedes comprar bolsas de datos para que sigas navegando.";
+								case "40gigas":
+									infoPlan1 = " <br/>Para <strong>Plan Grupal Acumula 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+
 									resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan0+" con el número "+numPort1+", con un valor mensual de "+ cfPlan0 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan0+".";
 									break;
-								case "35gigas":
-									infoPlan1 = " Para el <strong>PLAN WOM GRUPAL 35 GIGAS.</strong> el cargo fijo del plan es de "+ cfPlan1 +". Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, y por 2 años gigas libres para usar en 4G en las aplicaciones que quieras incluyendo contenido en HD. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming. Cuando cumplas los dos años de la promoción, quedaras con 35 gigas para navegar.";
+								case "PlanACUMULA60G":
+									infoPlan1 = " <br/>Para <strong>Plan Grupal ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
 									resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan1+" con el número "+numPort1+", con un valor mensual de "+ cfPlan1 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan1+".";
 									break;
-								case "45gigas":
-									infoPlan1 = " Para el <strong>PLAN WOM GRUPAL 45 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan2 +". Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras incluyendo contenido en HD para siempre, Whatsapp ilimitado con llamadas y video llamadas para siempre. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming.";
+								case "PlanACUMULA80G":
+									infoPlan1 = " <br/>Para <strong>Plan Grupal ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
 									resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan2+" con el número "+numPort1+", con un valor mensual de "+ cfPlan2 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan2+".";
 									break;
-								default:
-									infoPlan1 = " Para el <strong>GRUPAL GIGAS LIBRES.</strong>  El cargo fijo del plan es de "+ cfPlan3 +". Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming.";
-									resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan3+" con el número "+numPort1+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+".";
+
+                                case "PlanACUMULA100G":
+                                    infoPlan1 = " <br/>Para <strong>Plan Grupal ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
+                                    resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan3+" con el número "+numPort1+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+".";
+                                    break;
+								case "WomersLibre":
+									infoPlan1 = " <br/>Para <strong>Plan Grupal WOMERS libre</strong>: POR 25.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación TE ENTREGAMOS 130 GIGAS DE NAVEGACION Y al consumirlos tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl. <br/><br/>";
+
+									resumenPlan1 = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan4+" con el número "+numPort1+", con un valor mensual de "+ cfPlan4 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan4+".";
 							}
 							switch (document.getElementById("SelectPlan2").value){
-								case "25gigas":
-									infoPlan2 = " Y para el segundo, <strong>PLAN WOM GRUPAL 25 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan0 +". incluye 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Facebook, Twitter, Instagram y Snapchat para siempre en 4G de WOM sin ningún costo adicional. Como plan controlado si quedas sin minutos recuerda que puedes recargar y se descontarán $50 por minuto y SMS y en caso de usar todos tus GIGAS puedes comprar bolsas de datos para que sigas navegando. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan2 = " Y el segundo plan con "+ nomPlan0 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan0 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan0+".";
+								case "40gigas2":
+									infoPlan2 = " <br/>Para <strong>Plan Grupal Acumula 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+
+									resumenPlan2 = " Y el segundo plan con "+ nomPlan0 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan0 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan0+"<strong>"+promo1+"</strong>.";
 									break;
-								case "35gigas":
-									infoPlan2 = " Y para el segundo, <strong>PLAN WOM GRUPAL 35 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan1 +". Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, y por 2 años gigas libres para usar en 4G en las aplicaciones que quieras incluyendo contenido en HD. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming. Cuando cumplas los dos años de la promoción, quedaras con 35 gigas para navegar. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan2 = " Y el segundo plan con "+ nomPlan1 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan1 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan1+".";
+								case "PlanACUMULA60G2":
+									infoPlan2 = " <br/>Para <strong>Plan Grupal ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+									resumenPlan2 = " Y el segundo plan con "+ nomPlan1 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan1 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan1+"<strong>"+promo1+"</strong>.";
 									break;
-								case "45gigas":
-									infoPlan2 = " Y para el segundo, <strong>PLAN WOM GRUPAL 45 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan2 +". Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras incluyendo contenido en HD para siempre, Whatsapp ilimitado con llamadas y video llamadas para siempre. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming.<br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan2 = " Y el segundo plan con "+ nomPlan2 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan2 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan2+".";
+								case "PlanACUMULA80G2":
+									infoPlan2 = " <br/>Para <strong>Plan Grupal ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+									resumenPlan2 = " Y el segundo plan con "+ nomPlan2 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan2 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan2+"<strong>"+promo1+"</strong>.";
 									break;
-								default:
-									infoPlan2 = " Y para el segundo, <strong>GRUPAL GIGAS LIBRES.</strong> El cargo fijo del plan es de "+ cfPlan3 +". Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan2 = " Y el segundo plan con "+ nomPlan3 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+".";
+                                case "PlanACUMULA100G2":
+                                    infoPlan2 = " <br/>Para <strong>Plan ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
+                                    resumenPlan2 = " Y el segundo plan con "+ nomPlan3 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+"<strong>"+promo1+"</strong>.";
+                                    break;
+								case "WomersLibre2":
+                                    infoPlan2 = " <br/>Para <strong>Plan Grupal WOMERS libre</strong>: POR 25.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación TE ENTREGAMOS 130 GIGAS DE NAVEGACION Y al consumirlos tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl. <br/><br/>";
+									resumenPlan2 = " Y el segundo plan con "+ nomPlan4 +", con el número "+numPort2+", con un valor mensual de "+ cfPlan4 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan4+"<strong>"+promo1+"</strong>.";
 							}
 							infoPlan= infoPlan1+infoPlan2;
 							resumenPlan = resumenPlan1+resumenPlan2;
 						}
 						else{
 							switch (document.getElementById("SelectPlan1").value){
-								case "25gigas":
-									infoPlan = " Para el <strong>PLAN WOM GRUPAL 25 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan0 +". incluye 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Facebook, Twitter, Instagram y Snapchat para siempre en 4G de WOM sin ningún costo adicional. Como plan controlado si quedas sin minutos recuerda que puedes recargar y se descontarán $50 por minuto y SMS y en caso de usar todos tus GIGAS puedes comprar bolsas de datos para que sigas navegando. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan0+" con el número "+numPort1+", con un valor mensual de "+ cfPlan0 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan0+".";
+								case "40gigas":
+									infoPlan = " <br/>Para <strong>Plan Grupal Acumula 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan0+" con el número "+numPort1+", con un valor mensual de "+ cfPlan0 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan0+"<strong>"+promo1+"</strong>.";
 									break;
-								case "35gigas":
-									infoPlan = " Para el <strong>PLAN WOM GRUPAL 35 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan1 +". Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, y por 2 años gigas libres para usar en 4G en las aplicaciones que quieras incluyendo contenido en HD. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming. Cuando cumplas los dos años de la promoción, quedaras con 35 gigas para navegar. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan1+" con el número "+numPort1+", con un valor mensual de "+ cfPlan1 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan1+".";
+								case "PlanACUMULA60G":
+									infoPlan = " <br/>Para <strong>Plan Grupal ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan1+" con el número "+numPort1+", con un valor mensual de "+ cfPlan1 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan1+"<strong>"+promo1+"</strong>.";
 									break;
-								case "45gigas":
-									infoPlan = " Para el <strong>PLAN WOM GRUPAL 45 GIGAS.</strong> El cargo fijo del plan es de "+ cfPlan2 +". Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras incluyendo contenido en HD para siempre, Whatsapp ilimitado con llamadas y video llamadas para siempre. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Las gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming.<br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan2+" con el número "+numPort1+", con un valor mensual de "+ cfPlan2 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan2+".";
+								case "PlanACUMULA80G":
+									infoPlan = " <br/>Para <strong>Plan Grupal ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan2+" con el número "+numPort1+", con un valor mensual de "+ cfPlan2 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan2+"<strong>"+promo1+"</strong>.";
 									break;
-								default:
-									infoPlan = " Para el <strong>GRUPAL GIGAS LIBRES.</strong> El cargo fijo del plan es de "+ cfPlan3 +". Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes. Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura de los 50 países en wom.cl/roaming. <br/>Por disposición te recuerdo que tú como cliente revisarás la compatibilidad de tu equipo con nuestra red 4G en nuestra página wom.cl/4G después de adquirir este servicio.";
-									resumenPlan = " Según la oferta acordada aceptas portar 1 plan, proveniente de la compañía "+OldCompany1+", con el "+nomPlan3+" con el número "+numPort1+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+".";
+                                case "PlanACUMULA100G":
+                                    infoPlan = " <br/>Para <strong>Plan Grupal ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
+                                    resumenPlan = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan3+" con el número "+numPort1+", con un valor mensual de "+ cfPlan3 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan3+".";
+                                    break;    
+								case"WomersLibre":
+                                    infoPlan = " <br/>Para <strong>Plan Grupal WOMERS libre</strong>: POR 25.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación TE ENTREGAMOS 130 GIGAS DE NAVEGACION Y al consumirlos tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl. <br/><br/>";
+                                    resumenPlan = " Según la oferta acordada aceptas portar 2 planes, provenientes de la compañía "+OldCompany1+OldCompany2+", con el "+nomPlan4+" con el número "+numPort1+", con un valor mensual de "+ cfPlan4 +", el cual quedará con una rebaja en el costo fijo, por un valor de "+ cfrPlan4+".";
 							}
 						}
 						
-						//Despacho: recibe titular u otro. 
-						if(document.getElementById("Recibeotro").checked==true){
-							despa = "<br/>El despacho será en la dirección,<strong> calle: "+DireccionDespacho+", número: #"+ numero+", comuna: "+comuna+", "+region+". Y quien recibe el despacho será "+nomReceptor+", rut "+rutReceptor+" y teléfono "+telReceptor+".</strong>";
-						}
-						else{
-							despa = "<br/>El despacho será en la dirección,<strong> calle: "+DireccionDespacho+", número: #"+ numero+", comuna: "+comuna+", "+region+". Y quien recibe el despacho serás tú como titular.</strong>";
-						}
+
+						// Retiro
+
+
+						//if(document.getElementById("Direccionretiro").checked==true) {
+
+        				//retiro = " <br/>Lo ofertado será despachado a  <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
+
+
+        				//}   
+        				//else 
+
+
+                        if(document.getElementById("Recibeotro").checked==true) {
+            			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+", referencia: "+referencia+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
+        				}   
+        				else{
+            			despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+", referencia: "+referencia+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
+        				}
+
 						
 						//Activación según modo del número antes de portar. 
 						if(document.getElementById("otroNumero").checked==true){
@@ -608,30 +972,42 @@
 							
 						//Condición que solicita las boletas para plan de $19.990
 						if(document.getElementById("otroNumero").checked==true){
-							if(planPort1=="40gigas" && modoPort1=="postpago"){
-								cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+							if(planPort1=="PlanACUMULA100G" && modoPort1=="postpago" || planPort1=="WomersLibre" && modoPort1=="postpago"){
+
+								cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
 							}
-							else if(planPort2=="40gigas" && modoPort2=="postpago"){
-								cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
-							}
-							else{
-								cedula=" Además, enviarás al WhatsApp corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al WhatsApp que te indique. Considerar que sin este documento, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+                            else if (planPort2=="PlanACUMULA100G2" && modoPort2=="postpago" || planPort2=="WomersLibre2"  && modoPort2=="postpago"){
+                                cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+                            }
+
+							else {
+								cedula=" Además, enviarás al WhatsApp corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al WhatsApp que te indique. Considerar que sin este documento, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
 							}
 						}
-						else{
-							if(planPort1=="40gigas" && modoPort1=="postpago"){
-								cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+						     else if (planPort2=="PlanACUMULA100G2" && modoPort2=="postpago" || planPort2=="WomersLibre2" && modoPort2=="postpago"){
+
+                                cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+                            }
+
+                                //si no tienes el check en "otro numero"
+
+                            else if (planPort1=="PlanACUMULA100G" && modoPort1=="postpago" || planPort1=="WomersLibre"  && modoPort1=="postpago"){
+								cedula=" Además, enviarás al WhatsApp Corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta y además las últimas 3 boletas de tu otra compañía. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad y las boletas al WhatsApp que te indiqué. Considerar que sin estos documentos, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
 							}
 							else{
-								cedula=" Además, enviarás al WhatsApp corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al WhatsApp que te indique. Considerar que sin este documento, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
-							}
-						}		
+                                cedula=" Además, enviarás al WhatsApp corporativo +56935788140 la foto legible por ambos lados de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al WhatsApp que te indique. Considerar que sin este documento, tu contratación no se realizará. Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios. <br/>En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!<br/><br/><strong> ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/>";
+                            }
+							
+						
 						
 						condiciones = "<br/>- Recuerda que se revisará los planes asociados a tu rut para poder validar tu venta y confirmar que ya tienes este beneficio como Plan Grupal.<br>- Los planes y líneas que ya señalamos será válida esta rebaja para siempre, mientras mantengas 2 o más líneas activas en este Grupal bajo tu rut.<br>- Recuerda que las promociones sujetas al numero "+nSocio+" las perderás para optar a este gran beneficio. Si tu linea tiene equipo en arriendo y cuotas menores a 12 meses, se te cobraran en la próxima boleta la diferencia de la cuota inicial del equipo.<br/>";
 						recomendaciones ="<br/><strong>Como te portarás recuerda que:</strong><br>- No debes realizar cambio de compañía.<br>- No debes realizar cambio de plan dentro de la compañía actual.<br>- No dar de baja tu servicio.<br>- No botes el Chip de la compañía actual hasta que el proceso de activación y portabilidad termine con éxito.<br>- No tengas deuda vigente con tu compañía hasta que se realice la portabilidad.<br>";
 						contrato ="Para continuar con la venta necesito indicarte que debes firmar el documento de portabilidad, que se te ha enviado al correo electrónico, para ello tienes 3 opciones:<br>1) Tu titular, dejarlo firmado con quien recibirá la simcard, junto a una copia de tu cédula de identidad vigente y legible.<br>2) Tu titular, firmarlo al momento de la entrega del chip.<br>3)  Tu titular, descargarlo del link que te enviamos al correo y subirlo firmado.<br/><strong>¿Qué elijes?</strong><br/><br/>";
 						
-						mensaje= mensaje+resumenPlan+lineaAsoc+infoPlan+condiciones+recomendaciones+despa+porta+contrato+cedula;
+
+						// Mensaje
+
+						mensaje= mensaje+resumenPlan+lineaAsoc+infoPlan+condiciones+recomendaciones+despa+despacho+retiro+porta+contrato+cedula;
 							
 													
 						document.getElementById('txtRespuesta').innerHTML = mensaje;
@@ -650,6 +1026,8 @@
             <div class="container text-justify">
                 <h2 class="text-center">Comunicado al cliente:</h2>
                 <p text-align="justify" id="txtRespuesta">Contrato de venta a leer por el ejecutivo...</p>
+
+                 <!-- Boton borrar script -->
             <a class="btn btn-warning" onclick="clearAll()">Borrar Script</a>
             </div>
             

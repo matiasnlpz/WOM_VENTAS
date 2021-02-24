@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
-                    <h3 class="text-center" style="color: #351a51">LÍNEA ADICIONAL BAM</h3>
+                    <h3 class="text-center" style="color: #351a51">LÍNEA ADICIONAL INTERNET</h3>
                     <br>
 <div class="row">
 <div class="col-sm-6">
@@ -178,10 +178,19 @@
                                     <option value="Región de Los Lagos">Región de Los Lagos</option>
                                     <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
                                     <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
-                                    <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago
+                                    <option value="Región Metropolitana de Santiago">Región Metropolitana
                                     </option>
                                 </select>
                 </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="txtReferencia">Referencia</label>
+                <input type="text" class="form-control" id="txtreferencia" aria-describedby="ReferenciaHelp" maxlength="110"
+                    placeholder="Casa Esquina">
+                <small id="ReferenciaHelp" class="form-text text-muted">Referencia de la dirección.</small>
+            </div>
         </div>
 </div>
 
@@ -257,24 +266,24 @@
 <div class="row">
     <div class="col-sm-5">
         <div id="1line" class="form-group">
-            <label for="SelectPlan">Plan BAM 1 a contratar:</label>
+            <label for="SelectPlan">Plan INTERNET 1 a contratar:</label>
             <select class="form-control" id="SelectPlan" aria-describedby="PlanHelp" required>
                         <option selected disabled value="">Seleccione plan a contratar</option>
                         <option
-                            value="BAM 20 Gigas">
-                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                            value="INTERNET 20 Gigas">
+                            INTERNET 20 Gigas - Cargo fijo de $9.990</option>
                         <option
-                            value="BAM 40 Gigas">
-                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                            value="INTERNET 40 Gigas">
+                            INTERNET 40 Gigas - Cargo fijo de $12.990</option>
                         <option
-                            value="BAM 60 Gigas">
-                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                            value="INTERNET 60 Gigas">
+                            INTERNET 60 Gigas - Cargo fijo de $15.990</option>
                         <option
-                            value="BAM 90 Gigas">
-                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                            value="INTERNET 90 Gigas">
+                            INTERNET 90 Gigas - Cargo fijo de $19.990</option>
                         <option
-                            value="BAM 120 Gigas">
-                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+                            value="INTERNET 120 Gigas">
+                            INTERNET 120 Gigas - Cargo fijo de $25.990</option>
             </select>
         </div>
     </div>
@@ -284,24 +293,24 @@
 	</div>
 	<div class="col-sm-5">
         <div id="1line" class="form-group">
-            <label for="SelectPlan2">Plan BAM 2 a contratar:</label>
+            <label for="SelectPlan2">Plan INTERNET 2 a contratar:</label>
             <select class="form-control" id="SelectPlan2" aria-describedby="PlanHelp" required disabled>
                         <option selected disabled value="">Seleccione plan a contratar</option>
                         <option
-                            value="BAM 20 Gigas">
-                            BAM 20 Gigas - Cargo fijo de $9.990</option>
+                            value="INTERNET 20 Gigas">
+                            INTERNET 20 Gigas - Cargo fijo de $9.990</option>
                         <option
-                            value="BAM 40 Gigas">
-                            BAM 40 Gigas - Cargo fijo de $12.990</option>
+                            value="INTERNET 40 Gigas">
+                            INTERNET 40 Gigas - Cargo fijo de $12.990</option>
                         <option
-                            value="BAM 60 Gigas">
-                            BAM 60 Gigas - Cargo fijo de $15.990</option>
+                            value="INTERNET 60 Gigas">
+                            INTERNET 60 Gigas - Cargo fijo de $15.990</option>
                         <option
-                            value="BAM 90 Gigas">
-                            BAM 90 Gigas - Cargo fijo de $19.990</option>
+                            value="INTERNET 90 Gigas">
+                            INTERNET 90 Gigas - Cargo fijo de $19.990</option>
                         <option
-                            value="BAM 120 Gigas">
-                            BAM 120 Gigas - Cargo fijo de $25.990</option>
+                            value="INTERNET 120 Gigas">
+                            INTERNET 120 Gigas - Cargo fijo de $25.990</option>
             </select>
         </div>
     </div>
@@ -351,6 +360,7 @@
 		var receptor = document.getElementById('txtRecept').value;
 		var RutReceptor = document.getElementById('txtRutReceptor1').value + "-" + document.getElementById("txtRutReceptor2").value;
 		var TelReceptor = document.getElementById('txtTelefonoReceptor').value;
+        var referencia = document.getElementById('txtreferencia').value;
 		
 		var plan1 = document.getElementById('SelectPlan').value;
 		var plan2 = document.getElementById('SelectPlan2').value;
@@ -371,64 +381,64 @@
 		
 		if(document.getElementById("OtroPlan2").checked==true){
 			switch (plan1){
-				case "BAM 20 Gigas":
-					planDes1= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+				case "INTERNET 20 Gigas":
+					planDes1= " <strong>Plan INTERNET 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
 					break;			
-				case "BAM 40 Gigas":
-					planDes1= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+				case "INTERNET 40 Gigas":
+					planDes1= " <strong>Plan INTERNET 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
 					break;	
-				case "BAM 60 Gigas":
-					planDes1= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+				case "INTERNET 60 Gigas":
+					planDes1= " <strong>Plan INTERNET 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
 					break;
-				case "BAM 90 Gigas":
-					planDes1= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+				case "INTERNET 90 Gigas":
+					planDes1= " <strong>Plan INTERNET 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
 					break;
 				default:
-					planDes1= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+					planDes1= " <strong>Plan INTERNET 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
 			}
 			
 			switch (plan2){
-				case "BAM 20 Gigas":
-					planDes2= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+				case "INTERNET 20 Gigas":
+					planDes2= " <strong>Plan INTERNET 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
 					break;			
-				case "BAM 40 Gigas":
-					planDes2= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+				case "INTERNET 40 Gigas":
+					planDes2= " <strong>Plan INTERNET 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
 					break;	
-				case "BAM 60 Gigas":
-					planDes2= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+				case "INTERNET 60 Gigas":
+					planDes2= " <strong>Plan INTERNET 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
 					break;
-				case "BAM 90 Gigas":
-					planDes2= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+				case "INTERNET 90 Gigas":
+					planDes2= " <strong>Plan INTERNET 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
 					break;
 				default:
-					planDes2= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+					planDes2= " <strong>Plan INTERNET 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
 			}			
 			planDescrip= planDes1+" y "+planDes2;
 		}
 		else{
 			switch (plan1){
-				case "BAM 20 Gigas":
-					planDescrip= " <strong>Plan BAM 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
+				case "INTERNET 20 Gigas":
+					planDescrip= " <strong>Plan INTERNET 20 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $9.990.";
 					break;			
-				case "BAM 40 Gigas":
-					planDescrip= " <strong>Plan BAM 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
+				case "INTERNET 40 Gigas":
+					planDescrip= " <strong>Plan INTERNET 40 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $12.990.";
 					break;	
-				case "BAM 60 Gigas":
-					planDescrip= " <strong>Plan BAM 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
+				case "INTERNET 60 Gigas":
+					planDescrip= " <strong>Plan INTERNET 60 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $15.990.";
 					break;
-				case "BAM 90 Gigas":
-					planDescrip= " <strong>Plan BAM 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
+				case "INTERNET 90 Gigas":
+					planDescrip= " <strong>Plan INTERNET 90 Gigas</strong> de navegación para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $19.990.";
 					break;
-				case  "BAM 120 Gigas":
-					planDescrip= " <strong>Plan BAM 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
+				case  "INTERNET 120 Gigas":
+					planDescrip= " <strong>Plan INTERNET 120 Gigas</strong> de navegación  para que utilices en las aplicaciones que desees en nuestra red 4G. El cargo fijo del plan es de $25.990.";
 			}
 		}
 			
 		if(document.getElementById("Recibeotro").checked==true){
-			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+"</strong>, número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
+			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+"</strong>, número: #"+ numero+" comuna: "+comuna+", "+region+", referencia: "+referencia+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
 		}	
 		else{
-			despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+", número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
+			despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+", número: #"+ numero+" comuna: "+comuna+", "+region+", referencia: "+referencia+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
 		}
 		
 		

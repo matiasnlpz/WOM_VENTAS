@@ -130,52 +130,52 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-sm-4">
-        <div class="form-group">
-            
-                <label for="txtDireccionEntrega">Dirección de entrega:</label>
+<!-- Dirección de despacho-->
 
-                <input type="tel" required class="form-control" id="txtDireccionEntrega"
+<div class="row">
+
+    <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Despacho()" id="Direcciondespacho"
+                                    value=""><strong> Despacho </strong></label>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtDireccionEntrega">Dirección de despacho:</label>
+                <input type="tel" required class="form-control" disabled id="txtDireccionEntrega"
                     aria-describedby="direccionHelp" minlength="10" placeholder="Av. siempre viva">
-                <small id="direccionHelp" class="form-text text-muted">Dirección/Calle</small>
+                <small id="direccionHelp" class="form-text text-muted">Dirección/Calle/Pasaje</small>
             </div>
-	</div>
-	<div class="col-sm-2">
-        <div class="form-group">
-               <label for="txtNumeroDireccion">Número:</label>
-               <div class="input-group mb-2">
-                      <div class="input-group-prepend">
+        </div>
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtNumeroDireccion">Número:</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
                         <div class="input-group-text">#</div>
-                        </div>
-                        <input required minlength="2" maxlength="7" type="text" class="form-control" id="txtNumeroDireccion"  aria-describedby="numeroHelp" placeholder="916">
-                       
+                    </div>
+                    <input required minlength="2" maxlength="7" type="text" class="form-control" disabled id="txtNumeroDireccion"  aria-describedby="numeroHelp" placeholder="916">
                     </div>
            </div>
-
-    
-</div>
-	
-	
-	
-	
-	<div class="col-sm-2">
-        <div class="form-group">
-            <label for="txtRecepciona">Comuna:</label>
-            <input required type="text" class="form-control" id="txtComuna" aria-describedby="ComunaHelp" maxlength="20"
-                placeholder="Providencia">
-            <small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
         </div>
-    </div>
 
+</div>
+<div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label for="txtRecepciona">Comuna:</label>
+                <input required type="text" class="form-control" disabled id="txtComuna" aria-describedby="ComunaHelp" maxlength="20"
+                    placeholder="Providencia">
+                <small id="ComunaHelp" class="form-text text-muted">Comuna a la que será enviado.</small>
+            </div>
+        </div>
+    
 
+        <div class="col-sm-5">
+                 <div class="form-group">
 
-
-
-    <div class="col-sm-4">
-        <div class="form-group">
-                 <label for="Regiónes">Región</label>
-                                <select required class="form-control" id="Regiónes">
+                                <label for="regiones">Región</label>
+                                <select required class="form-control" disabled id="regiones">
                                     <option selected disabled value="">Seleccione una región</option>
                                     <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
                                     <option value="Región de Tarapaca">Región de Tarapaca</option>
@@ -183,24 +183,206 @@
                                     <option value="Región de Atacama">Región de Atacama</option>
                                     <option value="Región de Coquimbo">Región de Coquimbo</option>
                                     <option value="Región de Valparaiso">Región de Valparaiso</option>
-                                    <option value="Región del Libertador Bernado O'Higgins">Región del Libertador Bernado O'Higgins</option>
+                                    <option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
                                     <option value="Región del Maule">Región del Maule</option>
                                     <option value="Región de Ñuble">Región de Ñuble</option>
                                     <option value="Región del Biobío">Región del Biobío</option>
                                     <option value="Región de La Araucania">Región de La Araucania</option>
-                                    <option value="Región de Los Ríos">Región de Los Rios</option>
+                                    <option value="Región de Los Rios">Región de Los Rios</option>
                                     <option value="Región de Los Lagos">Región de Los Lagos</option>
                                     <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
                                     <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
                                     <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago
                                     </option>
                                 </select>
-                                <small id="RegiónesS" for="Regiónes" class="form-text text-muted">Seleccione una
-                                    región</small>
+                </div>
+            </div>
+    </div>
+
+
+
+                    <script>
+                        function Despacho() {
+                            if (document.getElementById("Direcciondespacho").checked) 
+                            {
+                                document.getElementById("Direccionretiro").disabled=true;
+                                document.getElementById("txtDireccionEntrega").removeAttribute('disabled');
+                                document.getElementById("txtNumeroDireccion").removeAttribute('disabled');
+                                document.getElementById("txtComuna").removeAttribute('disabled');
+                                document.getElementById("regiones").removeAttribute('disabled');
+                                
+                                
+                            } else 
+                            {
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
+                                document.getElementById("txtDireccionEntrega").disabled=true;
+                                document.getElementById("txtNumeroDireccion").disabled=true;
+                                document.getElementById("txtComuna").disabled=true;
+                                document.getElementById("regiones").disabled=true;
+                                document.getElementById("txtDireccionEntrega").value="";
+                                document.getElementById("txtNumeroDireccion").value="";
+                                document.getElementById("txtComuna").value="";
+                                document.getElementById("regiones").value="";
+                                
+                            }
+                        };
+                    </script>
+
+<!-- Retiro-->
+
+
+
+
+<div class="row">
+
+    <div class="col-sm-2" style="padding-top: 30px">
+                            <label class="checkbox"><input type="checkbox" onclick="Retiro()" id="Direccionretiro"
+                                    value=""><strong> Retiro </strong></label>
+        </div>
+
+
+
+<script type="text/javascript">
+
+function cambiar() {
+    var x = document.getElementById("sucursal");
+    var vacio = new Option("Elige una opción","");
+    x.options[x.options.length] = vacio;
+    x.selectedIndex = vacio;
+}
+function mostrar(){
+    var region = document.getElementById("region").value;
+    var x = document.getElementById("sucursal");    
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x.options[i].id == region){
+            x.options[i].style.display = 'block';
+        } else {
+            x.options[i].style.display = 'none';
+        }
+    }
+    if (region == 2 || region == null) {
+        var vacio = new Option("Elige una opción","");
+        x.options[x.options.length] = vacio;
+        x.selectedIndex = vacio;
+    }
+}
+</script>
+
+
+
+<div class="col-sm-5">
+    <form method="get" action="try.html" >
+            
+        <label for="region">Region</label>  
+        <select name="region" id="region" onchange="cambiar()" onClick="mostrar()" required class="form-control" disabled id="regiones">
+
+                                    
+                                    <option selected value=""> Seleccione una región </option>
+                              <!--  <option value="1">Región de Arica a Parinacota</option> --> 
+                              <!--  <option value="2">Región de Tarapaca</option> --> 
+                                    <option value="3">Región de Antofagasta</option>
+                              <!--  <option value="4">Región de Atacama</option> --> 
+                                    <option value="5">Región de Coquimbo</option>
+                                    <option value="6">Región de Valparaiso</option>
+                                    <option value="7">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="8">Región del Maule</option>
+                              <!--  <option value="9">Región de Ñuble</option> --> 
+                                    <option value="10">Región del Biobío</option>
+                              <!--  <option value="11">Región de La Araucania</option> --> 
+                              <!--  <option value="12">Región de Los Rios</option> --> 
+                              <!--  <option value="13">Región de Los Lagos</option> --> 
+                              <!--  <option value="14">Región de Aysén del G. Carlos Ibañez del Campo</option> --> 
+                              <!--  <option value="15">Región de Magallanes y de la Antártica Chilena</option> --> 
+                                    <option value="16">Región Metropolitana de Santiago
+                                    </option>
+   
+        </select>
+        <small id="RegionHelp" class="form-text text-muted">Región a la que será enviado.</small>
+    </div>
+</div>
+
+
+<!-- Sucursal para retiro-->
+
+<!-- La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Region del maule value 8, la sucursal debe tener el id 8-->
+ 
+
+<div class="row">
+
+        <div class="col-sm-12">
+            
+        <label for="Sucursal">Sucursal</label> 
+        <select name="sucursal" id="sucursal" required class="form-control" disabled id="sucursal">
+            <option selected value=""> Seleccione una Sucursal </option>
+    
+            <option value="Región de Antofagasta/Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs" id="3" style='display:none;'>Comuna Antofagasta/Sucursal Baquedano/Calle Baquedano 532/ Horario lunes a viernes de 09:00 a 20:00 hrs, sábado 10:00 a 19:00 hrs</option>
+
+            <option value="Región de Coquimbo/Comuna La Serena/Sucursal Balmaceda/Calle Balmaseda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs" id="5" style='display:none;'>Comuna La Serena/Sucursal Balmaceda/Calle Balmaceda 445/ Horario lunes a viernes 09:00 a 20:00 hrs, sábado de 10:00 a 18:00 hrs</option>
+            
+            <option value="Región de Valparaiso/Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs" id="6" style='display:none;'>Comuna Viña del mar/Sucursal Etshevers/calle Valparaíso 495/ Horario lunes a viernes 09:30 a 20:00, sábado 10:30 a 19:00 hrs</option>
+            
+            <option value="Región de Valparaiso/San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs" id="6" style='display:none;'>San Felipe/Sucursal Arturo Prat/calle Arturo Prat 723/ Horario lunes a viernes 10:00 a 21:00, Sa 10:00 a 19:00 hrs</option>
+            
+            <option value="Region del Libertador Bernado O'Higgins/Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="7" style='display:none;'>Comuna Rancagua/Sucursal Rancagua 02/calle Independencia 601/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región del Maule/Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs" id="8" style='display:none;'>Comuna Linares/Sucursal Linares 02/calle Independencia local B648/Horario lunes a sábado de 09:30 a 19:30 hrs</option>
+            
+            <option value="Región del Biobío/Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs" id="10" style='display:none;'>Comuna Concepción/Concepción Chacabuco/calle Chacabuco 524/ Horario lunes a viernes 09:00 a 19:30, sábado 10:00 a 16:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal Ahumada/calle Ahumada 64/ Horario lunes a viernes 09:00 a 20:00, sábado 11:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs" id="16" style='display:none;'>Comuna Santiago/Sucursal General Mackenna/calle General Mackenna 1321/Horario lunes a viernes 09:00 a 18:00, sábado 10:00 a 14:00 hrs</option>
+
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Mall plaza los dominicos/Av. Padre Hurtado Sur, BS 1456 785/ Horario lunes a Domingo de 10:00 a 21:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Apumanque/calle Apoquindo 6085/ Horario lunes a viernes 09:00 a 20:00, sábado 10:00 a 19:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs" id="16" style='display:none;'>Comuna Las Condes/Sucursal Vitacura/calle Nueva Tajamar 289/ Horario lunes a viernes 10:00 a 20:00, sábado 10:30 a 18:30 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs" id="16" style='display:none;'>Comuna Maipú/Sucursal Arauco Maipú/av. Américo Vespucio L1009 n°1001/ Horario lunes a sábado de 09:00 a 20:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs" id="16" style='display:none;'>Comuna Providencia/Sucursal Los Leones/calle nueva providencia 2228/Horario lunes a viernes 10:00 a 20:00, sábado 10:00 a 18:00 hrs</option>
+            
+            <option value="Región Metropolitana de Santiago/Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs" id="16" style='display:none;'>Comuna Huechuraba/Sucursal Mall plaza norte/Américo Vespucio norte 1737/ Horario lunes a Domingo 10:00 a 21:00 hrs</option>
+            
+            
+        </select>
+        <small id="SucursalHelp" class="form-text text-muted">Sucursal a la que será enviado.</small>
+                
         </div>
     </div>
-    
-</div>
+        
+</form>
+
+
+
+
+                    <script>
+                        function Retiro() {
+                            if (document.getElementById("Direccionretiro").checked) 
+                            {
+                                document.getElementById("Direcciondespacho").disabled=true;
+                                document.getElementById("Recibeotro").disabled=true;
+                                document.getElementById("region").removeAttribute('disabled');
+                                document.getElementById("sucursal").removeAttribute('disabled');
+                                
+                                
+                                
+                            } else 
+                            {   
+                                document.getElementById("Direcciondespacho").removeAttribute('disabled');
+                                document.getElementById("Recibeotro").removeAttribute('disabled');
+                                document.getElementById("region").disabled=true;
+                                document.getElementById("region").value="";
+                                document.getElementById("sucursal").disabled=true;
+                                document.getElementById("sucursal").value="";
+                                                                
+                            }
+                        };
+                    </script>
+
+
 
 
 <!-- Otro Receptor -->
@@ -216,7 +398,7 @@
                             <label for="txtRecept">Nombre de quien recibe:</label>
                             <input required type="text" class="form-control" disabled id="txtRecept" aria-describedby="receptHelp" maxlength="40"
                             placeholder="Ana María Cortez Pérez">
-                        
+                        <small id="receptHelp" class="form-text text-muted">Nombre completo</small>
         </div>
 </div>
         <div class="col-sm-3">
@@ -232,14 +414,14 @@
                             aria-describedby="rutHelp" placeholder="K" maxlength="1" minlength="1">
                     </div>
                 </div>
-            <small id="RutHelp" class="form-text text-muted">No acepta N° de pasaporte.</small>
+            <small id="RutHelp" class="form-text text-muted">No acepta N° de pasaporte</small>
         </div>
     </div>
     <div class="col-sm-3">
         <div class="form-group">
             <label for="txtTelefonoContacto1">Teléfono de quien recibe:</label>
                 <input required type="tel" class="form-control" disabled id="txtTelefonoReceptor"maxlength="9" placeholder="987654321 ó 712310134">
-				<small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
+                <small id="nombreHelp" class="form-text text-muted">Red fija o celular.</small>
             </div>
     </div>
 </div>
@@ -248,6 +430,7 @@
                         function Quienrecibe() {
                             if (document.getElementById("Recibeotro").checked) 
                             {
+                                document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtRecept").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor1").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor2").removeAttribute('disabled');
@@ -256,32 +439,34 @@
                                 
                             } else 
                             {
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtRecept").disabled=true;
                                 document.getElementById("txtRutReceptor1").disabled=true;
                                 document.getElementById("txtRutReceptor2").disabled=true;
                                 document.getElementById("txtTelefonoReceptor").disabled=true;
-								document.getElementById("txtRecept").value="";
+                                document.getElementById("txtRecept").value="";
                                 document.getElementById("txtRutReceptor1").value="";
                                 document.getElementById("txtRutReceptor2").value="";
                                 document.getElementById("txtTelefonoReceptor").value="";
-								
 
                             }
                         };
                     </script>
 
 
+<!-- Planes-->
+
 <div class="row">
-	<div class="col-sm-3">
+    <div class="col-sm-3">
         <div id="1line" class="form-group">
             <label for="SelectPlan">Plan a contratar:</label>
             <select class="form-control" id="SelectPlan" aria-describedby="PlanHelp">
                         <option selected disabled value="">Seleccione plan</option>
-                        <option value="15gigas">Plan WOM 15 Gigas</option>
-                <!--    <option value="25gigas">Plan WOM 25 Gigas</option> -->
+                    <!--<option value="15gigas">Plan WOM 15 Gigas</option> -->
+                    <!--<option value="25gigas">Plan WOM 25 Gigas</option> -->
                         <option value="35gigas">Plan WOM 35 Gigas</option>
-                <!--    <option value="45gigas">Plan WOM 45 Gigas</option>
-                        <option value="GigasLibres">Plan Gigas Libres</option> -->
+                    <!--<option value="45gigas">Plan WOM 45 Gigas</option> -->
+                    <!--<option value="GigasLibres">Plan Gigas Libres</option> -->
             </select>
         </div>
     </div>
@@ -301,16 +486,16 @@
             </select>
             <small id="companyHelp" for="companyAnterior" class="form-text text-muted">Compañia donante.</small>
         </div>
-	</div>
-	<div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
         <div class="form-group">
-			<label for="companyAnterior">Modalidad de origen:</label>
-				<select required class="form-control" id="modoAnterior">
-					<option selected disabled value="">Seleccione modalidad</option>
-					<option value="prepago">Prepago</option>
-					<option value="postpago">Post-Pago</option>
-				</select>
-		</div>
+            <label for="companyAnterior">Modalidad de origen:</label>
+                <select required class="form-control" id="modoAnterior">
+                    <option selected disabled value="">Seleccione modalidad</option>
+                    <option value="prepago">Prepago</option>
+                    <option value="postpago">Post-Pago</option>
+                </select>
+        </div>
     </div>
     <div class="col-sm-3">
         <div class="form-group">
@@ -325,6 +510,7 @@
     </div>
 </div>
 
+<!-- Boton Generar script -->
 
 <br>
 <div class="text-center">
@@ -346,7 +532,7 @@
         var NumeroContacto2= "+56"+document.getElementById('txtTelefonoContacto2').value;
         var DireccionDespacho= document.getElementById('txtDireccionEntrega').value;
         var comuna = document.getElementById('txtComuna').value;
-        var region = document.getElementById('Regiónes').value;
+        var region = document.getElementById('regiones').value;
         var receptor = document.getElementById('txtRecept').value;
         var RutReceptor = document.getElementById('txtRutReceptor1').value+"-"+document.getElementById("txtRutReceptor2").value;
         var numeroPortado = "+56"+document.getElementById("txtNumeroPortado").value;
@@ -356,7 +542,12 @@
 		var finVenta="";
 		var despa="";
 		var porta="";
-
+        var sucursal =document.getElementById('sucursal').value;
+        var TelReceptor =document.getElementById('txtTelefonoReceptor').value;
+        var receptor = document.getElementById('txtRecept').value;
+        var RutReceptor = document.getElementById('txtRutReceptor1').value+"-"+document.getElementById("txtRutReceptor2").value;
+        var retiro="";
+        var despacho="";
 
         var mensaje = intro+ "<br/> <br/>Te cuento que ahora validaremos tus datos personales, al finalizar te pido confirmar con un SÍ: <br/><strong> Tu nombre completo es: " + nombre +", tu rut es: "+rutCli+
         ", tu correo electrónico: "+correoCli+"</strong>. Según la oferta acordada aceptas portar un plan con el número: <strong>"+numeroPortado+"</strong> proveniente de la compañía: <strong>"+OldCompany+ 
@@ -367,9 +558,9 @@
 
        
 
-        var promo15G=" con el Plan 15 Gigas, con el número <strong>"+numeroPortado+"</strong>, con un valor mensual de $9.990, El que quedará el cargo fijo rebajado a $4.995 por 12 meses. Pasando al mes 7 tu plan toma el valor normal ya informado. Pasando al mes 7 tu plan toma el valor normal ya informado. Tus números de contacto son: "+ NumeroContacto1+" y "+NumeroContacto2+".</strong> <br/>";
+        var promo15G=" con el Plan 15 Gigas, con el número <strong>"+numeroPortado+"</strong>, con un valor mensual de $9.990, El que quedará el cargo fijo rebajado a $4.995 por 12 meses. Pasando al mes 13 tu plan toma el valor normal ya informado. Tus números de contacto son: "+ NumeroContacto1+" y "+NumeroContacto2+".</strong> <br/>";
 	    
-        var promo35G=" con el Plan 35 Gigas, con el número <strong>"+numeroPortado+"</strong>, con un valor mensual de $15.990, El cual quedará con un cargo fijo rebajado a $7.995 por 12 meses. Pasando al mes 7 tu plan toma el valor normal ya informado. Tus números de contacto son: "+ NumeroContacto1+" y "+NumeroContacto2+".</strong> <br/>";
+        var promo35G=" con el Plan 35 Gigas, con el número <strong>"+numeroPortado+"</strong>, con un valor mensual de $15.990, El cual quedará con un cargo fijo rebajado a $7.995 por 12 meses. Pasando al mes 13 tu plan toma el valor normal ya informado. Tus números de contacto son: "+ NumeroContacto1+" y "+NumeroContacto2+".</strong> <br/>";
 
 
 
@@ -424,14 +615,20 @@
 			}
 		
 
-		//Recepción por un tercero
-		
-		if(document.getElementById("Recibeotro").checked==true){
-                despa = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienza una vez terminado el proceso interno de validación de la venta. El despacho será en la dirección,<strong> calle: "+DireccionDespacho+", número: #"+ numero+", comuna: "+comuna+", "+region+".</strong> Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+telReceptor+"</strong>.<br/>";
-            }
-		else{
-                despa = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta. El despacho será en la dirección,<strong> calle: "+DireccionDespacho+", número: #"+ numero+", comuna: "+comuna+", "+region+".</strong> Y quien recibe el despacho serás tú mismo como titular.<br/>";
-		}
+		// Retiro
+
+        if(document.getElementById("Direccionretiro").checked==true) {
+
+        retiro = " <br/>Lo ofertado será despachado a  <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
+
+
+        }   
+        else if(document.getElementById("Recibeotro").checked==true) {
+            despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.";
+        }   
+        else{
+            despacho= "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta y será enviado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+"</strong>. Y quien recibe el despacho serás tú mismo como titular.<br/>";
+        }
 
 		
 		if(origen=="prepago"){
@@ -450,7 +647,7 @@
 		
 		
 		
-		mensaje = mensaje+confirmacion+planDescrip+despa+docContrato+porta+finVenta;	    
+		mensaje = mensaje+confirmacion+planDescrip+despa+despacho+retiro+docContrato+porta+finVenta;	    
         
         document.getElementById('txtRespuesta').innerHTML = mensaje;
     }; 
