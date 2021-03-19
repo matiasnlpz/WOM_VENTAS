@@ -260,7 +260,7 @@
                         function Despacho() {
                             if (document.getElementById("Direcciondespacho").checked) 
                             {
-                                // document.getElementById("Direccionretiro").disabled=true;
+                                document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtDireccionEntrega").removeAttribute('disabled');
                                 document.getElementById("txtNumeroDireccion").removeAttribute('disabled');
                                 document.getElementById("txtComuna").removeAttribute('disabled');
@@ -270,7 +270,7 @@
                                 
                             } else 
                             {
-                                //document.getElementById("Direccionretiro").removeAttribute('disabled');
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtDireccionEntrega").disabled=true;
                                 document.getElementById("txtNumeroDireccion").disabled=true;
                                 document.getElementById("txtComuna").disabled=true;
@@ -288,17 +288,18 @@
 
 <!-- Retiro-->
 
-<!-- 
+
 
 
 <div class="row">
 
     <div class="col-sm-2" style="padding-top: 30px">
-                            <label class="checkbox"><input type="checkbox" onclick="Retiro()" disabled id="Direccionretiro"
+                            <label class="checkbox"><input type="checkbox" onclick="Retiro()" id="Direccionretiro"
                                     value=""><strong> Retiro </strong></label>
         </div>
 
 
+<!-- Sucursal para retiro
 
 <script type="text/javascript">
 
@@ -327,42 +328,91 @@ function mostrar(){
 }
 </script>
 
+-->
 
- Regiones para retiro 
+
+ <!-- Regiones para retiro --> 
 
 <div class="col-sm-5">
     <form method="get" action="try.html" >
             
         <label for="region">Region</label>  
-        <select name="region" id="region" onchange="cambiar()" onClick="mostrar()" required class="form-control" disabled id="regiones">
+        <select name="region" id="region" required class="form-control" disabled id="regiones">
 
                                     
                                     <option selected value=""> Seleccione una región </option>
-                                <option value="1">Región de Arica a Parinacota</option>  
-                                <option value="2">Región de Tarapaca</option>  
-                                    <option value="3">Región de Antofagasta</option>
-                                <option value="4">Región de Atacama</option>  
-                                    <option value="5">Región de Coquimbo</option>
-                                    <option value="6">Región de Valparaiso</option>
-                                    <option value="7">Region del Libertador Bernado O'Higgins</option>
-                                    <option value="8">Región del Maule</option>
-                               <option value="9">Región de Ñuble</option>  
-                                    <option value="10">Región del Biobío</option>
-                                <option value="11">Región de La Araucania</option>  
-                                <option value="12">Región de Los Rios</option>  
-                                <option value="13">Región de Los Lagos</option>  
-                                <option value="14">Región de Aysén del G. Carlos Ibañez del Campo</option> 
-                                <option value="15">Región de Magallanes y de la Antártica Chilena</option>  
-                                    <option value="16">Región Metropolitana de Santiago
+                                <option selected disabled value="">Seleccione una región</option>
+                                    <option value="Región de Arica a Parinacota">Región de Arica a Parinacota</option>
+                                    <option value="Región de Tarapaca">Región de Tarapaca</option>
+                                    <option value="Región de Antofagasta">Región de Antofagasta</option>
+                                    <option value="Región de Atacama">Región de Atacama</option>
+                                    <option value="Región de Coquimbo">Región de Coquimbo</option>
+                                    <option value="Región de Valparaiso">Región de Valparaiso</option>
+                                    <option value="Region del Libertador Bernado O'Higgins">Region del Libertador Bernado O'Higgins</option>
+                                    <option value="Región del Maule">Región del Maule</option>
+                                    <option value="Región de Ñuble">Región de Ñuble</option>
+                                    <option value="Región del Biobío">Región del Biobío</option>
+                                    <option value="Región de La Araucania">Región de La Araucania</option>
+                                    <option value="Región de Los Rios">Región de Los Rios</option>
+                                    <option value="Región de Los Lagos">Región de Los Lagos</option>
+                                    <option value="Región de Aysén del G. Carlos Ibañez del Campo">Región de Aysén del G. Carlos Ibañez del Campo</option>
+                                    <option value="Región de Magallanes y de la Antártica Chilen">Región de Magallanes y de la Antártica Chilena</option>
+                                    <option value="Región Metropolitana de Santiago">Región Metropolitana
+                                    </option>
                                     </option> 
 
         </select>
-        <small id="RegionHelp" class="form-text text-muted">Región a la que será enviado.</small>
+        <small id="RegionHelp" class="form-text text-muted">Región de la Tienda.</small>
     </div>
+
+<!-- Tienda para retiro --> 
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtTienda">Tienda:</label>
+                <input required type="text" class="form-control" disabled id="txtTienda" aria-describedby="TiendaHelp" maxlength="50"
+                    placeholder="Sucursal Talca 01">
+                <small id="TiendaHelp" class="form-text text-muted">Tienda WOM</small>
+            </div>
+        </div>
+
+<!-- Provincia para retiro -->
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtProvinciaTienda">Provincia:</label>
+                <input required type="text" class="form-control" disabled id="txtProvinciaTienda" aria-describedby="ProvinciaHelp" maxlength="45"
+                    placeholder="Talca">
+                <small id="ProvinciaHelp" class="form-text text-muted">Provincia de la tienda.</small>
+            </div>
+        </div>
+    
+<!-- Comuna para retiro --> 
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtComunaTienda">Comuna:</label>
+                <input required type="text" class="form-control" disabled id="txtComunaTienda" aria-describedby="ComunaTiendaHelp" maxlength="50"
+                    placeholder="Talca">
+                <small id="ComunaTiendaHelp" class="form-text text-muted">Comuna de la tienda.</small>
+            </div>
+        </div>
+    
+<!-- Dirección Tienda para retiro --> 
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="txtDireccionTienda">Dirección de Tienda:</label>
+                <input required type="text" class="form-control" disabled id="txtDireccionTienda"
+                    aria-describedby="direccionTiendaHelp" maxlength="50" placeholder="1 Sur 1537">
+                <small id="direccionTiendaHelp" class="form-text text-muted">Dirección de la Tienda.</small>
+            </div>
+        </div>
+
 </div>
   
 
-Sucursal para retiro-
+<!-- Sucursal para retiro
 
 La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Region del maule value 8, la sucursal debe tener el id 8-
 
@@ -411,7 +461,9 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
         </div>
     </div>
         
-</form>
+</form> -->
+
+
 
 
 
@@ -423,7 +475,12 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                                 document.getElementById("Direcciondespacho").disabled=true;
                                 document.getElementById("Recibeotro").disabled=true;
                                 document.getElementById("region").removeAttribute('disabled');
-                                document.getElementById("sucursal").removeAttribute('disabled');
+                                //document.getElementById("sucursal").removeAttribute('disabled');
+                                document.getElementById("txtTienda").removeAttribute('disabled');
+                                document.getElementById("txtProvinciaTienda").removeAttribute('disabled');
+                                document.getElementById("txtComunaTienda").removeAttribute('disabled');
+                                document.getElementById("txtDireccionTienda").removeAttribute('disabled');
+                                
                                 
                                 
                                 
@@ -433,13 +490,21 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                                 document.getElementById("Recibeotro").removeAttribute('disabled');
                                 document.getElementById("region").disabled=true;
                                 document.getElementById("region").value="";
-                                document.getElementById("sucursal").disabled=true;
-                                document.getElementById("sucursal").value="";
+                                document.getElementById("txtTienda").disabled=true;
+                                document.getElementById("txtTienda").value="";
+                                document.getElementById("txtProvinciaTienda").disabled=true;
+                                document.getElementById("txtProvinciaTienda").value="";
+                                document.getElementById("txtComunaTienda").disabled=true;
+                                document.getElementById("txtComunaTienda").value="";
+                                document.getElementById("txtDireccionTienda").disabled=true;
+                                document.getElementById("txtDireccionTienda").value="";
+                                //document.getElementById("sucursal").disabled=true;
+                                //document.getElementById("sucursal").value="";
                                                                 
                             }
                         };
                     </script>
- -->
+ 
  
 
 
@@ -489,7 +554,7 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                         function Quienrecibe() {
                             if (document.getElementById("Recibeotro").checked) 
                             {
-                                // document.getElementById("Direccionretiro").disabled=true;
+                                document.getElementById("Direccionretiro").disabled=true;
                                 document.getElementById("txtRecept").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor1").removeAttribute('disabled');
                                 document.getElementById("txtRutReceptor2").removeAttribute('disabled');
@@ -498,7 +563,7 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                                 
                             } else 
                             {
-                                // document.getElementById("Direccionretiro").removeAttribute('disabled');
+                                document.getElementById("Direccionretiro").removeAttribute('disabled');
                                 document.getElementById("txtRecept").disabled=true;
                                 document.getElementById("txtRutReceptor1").disabled=true;
                                 document.getElementById("txtRutReceptor2").disabled=true;
@@ -527,20 +592,20 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                             value="10gigas">
                             Plan WOM 10 Gigas</option>
                         <option
-                            value="20gigas">
-                            Plan WOMERS 20 Gigas</option>
+                            value="25gigas">
+                            Plan WOMERS 25 Gigas</option>
                         <option
-                            value="40gigas">
-                            Plan WOMERS 40 Gigas</option>
+                            value="50gigas">
+                            Plan WOMERS 50 Gigas</option>
                         <option
-                            value="ACUMULA60gigas">
-                            Plan Acumula 60 Gigas</option>
-                        <option
-                            value="ACUMULA80gigas">
-                            Plan Acumula 80 Gigas</option>
+                            value="ACUMULA75gigas">
+                            Plan Acumula 75 Gigas</option>
                         <option
                             value="ACUMULA100gigas">
                             Plan Acumula 100 Gigas</option>
+                        <option
+                            value="ACUMULA125gigas">
+                            Plan Acumula 125 Gigas</option>
                         <option
                             value="WomesLibre">
                             Plan WOMERS Libres</option>
@@ -560,20 +625,20 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
                             value="10gigas">
                             Plan WOM 10 Gigas</option>
                         <option
-                            value="20gigas">
-                            Plan WOMERS 20 Gigas</option>
+                            value="25gigas">
+                            Plan WOMERS 25 Gigas</option>
                         <option
-                            value="40gigas">
-                            Plan WOMERS 40 Gigas</option>
+                            value="50gigas">
+                            Plan WOMERS 50 Gigas</option>
                         <option
-                            value="ACUMULA60gigas">
-                            Plan Acumula 60 Gigas</option>
-                        <option
-                            value="ACUMULA80gigas">
-                            Plan Acumula 80 Gigas</option>
+                            value="ACUMULA75gigas">
+                            Plan Acumula 75 Gigas</option>
                         <option
                             value="ACUMULA100gigas">
                             Plan Acumula 100 Gigas</option>
+                        <option
+                            value="ACUMULA125gigas">
+                            Plan Acumula 125 Gigas</option>
                         <option
                             value="WomesLibre">
                             Plan WOMERS Libres</option>
@@ -626,7 +691,7 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
         
     document.getElementById("Promocion").value=" Adicionalmente tenemos la promoción de darte este plan con un 50% de descuento por 12 meses, a un valor de $5.995, luego en el mes 13 comienzas a pagar $11.990. "
 
-    } else if (document.getElementById("Promocion").checked && document.getElementById("SelectPlan").value=="ACUMULA40gigas" ){
+    } else if (document.getElementById("Promocion").checked && document.getElementById("SelectPlan").value=="ACUMULA50gigas" ){
 
         
     document.getElementById("Promocion").value=" Adicionalmente tenemos la promoción de darte este plan con un 50% de descuento por 12 meses, a un valor de $6.995, luego en el mes 13 comienzas a pagar $13.990. "
@@ -683,7 +748,7 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
         
     document.getElementById("Promocion2").value=" Adicionalmente tenemos la promoción de darte este plan con un 50% de descuento por 12 meses, a un valor de $5.995, luego en el mes 13 comienzas a pagar $11.990. "
 
-    } else if (document.getElementById("Promocion2").checked && document.getElementById("SelectPlan2").value=="ACUMULA40gigas"){
+    } else if (document.getElementById("Promocion2").checked && document.getElementById("SelectPlan2").value=="ACUMULA50gigas"){
 
         
     document.getElementById("Promocion2").value=" Adicionalmente tenemos la promoción de darte este plan con un 50% de descuento por 12 meses, a un valor de $6.995, luego en el mes 13 comienzas a pagar $13.990. "
@@ -752,8 +817,15 @@ La region se enlaza con la sucursal por el "value" y el id. Ejemplo: Para la Reg
         var RutReceptor = document.getElementById('txtRutReceptor1').value+"-"+document.getElementById("txtRutReceptor2").value;
         var TelReceptor =document.getElementById('txtTelefonoReceptor').value;
         var referencia = document.getElementById('txtreferencia').value;
-        // var sucursal =document.getElementById('sucursal').value;
+        //var sucursal =document.getElementById('sucursal').value;
         
+        var RetRegion = document.getElementById('region').value;
+        var RetTienda = document.getElementById('txtTienda').value;
+        var RetProvincia = document.getElementById('txtProvinciaTienda').value;
+        var RetComuna = document.getElementById('txtComunaTienda').value;
+        var RetDireccionTienda = document.getElementById('txtDireccionTienda').value;
+
+
 
         //var promo = document.getElementById('Promocion').value;
         //var promo2 = document.getElementById('Promocion2').value;
@@ -789,33 +861,33 @@ if (document.getElementById("CedulaVigente").checked) {
                        planDes1= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOM 10 Gigas</strong> de un cargo fijo mensual de $7.990 incluye: 400 minutos, 50 mensajes de texto, Whatsapp ilimitado con llamadas y video llamadas para siempre, 10 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter por 1 año en 4G de WOM sin ningún costo adicional!. <br/><br/>";
                      break;
 
-				  case "20gigas":
-					   planDes1= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOMERS 20 Gigas</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 20 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+				  case "25gigas":
+					   planDes1= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOMERS 25 Gigas</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red+ Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
                      break;
                
 
 
-				  case "40gigas":
-					     planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOMERS 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+				  case "50gigas":
+					     planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 50 GB</strong> POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 50 gigas de navegación  en cualquier red, Gigas libres por 1 año en red 4g, + redes sociales libres para que utilices en Facebook, Instagram, Twitter y Snapchat para siempre en 4G WOM sin ningún costo adicional!.Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!.<br/>-Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
 
 					break;
 
 
 
-				  case "ACUMULA60gigas":
-					     planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+				  case "ACUMULA75gigas":
+					     planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 75 GB</strong> Para Planes ACUMULA 75 GB: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos) + Gigas libres por 2 años en nuestra Red 4G, sin ningún costo adicional!. ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!.<br/>-Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
 					break;
 
 
-                    case "ACUMULA80gigas":
-                         planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                    case "ACUMULA100gigas":
+                         planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 100 GB</strong> de un cargo fijo mensual de $16.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
 
                     break;
 
 
 
-                    case "ACUMULA100gigas":
-                         planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                    case "ACUMULA125gigas":
+                         planDes1 = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 125 GB</strong> de un cargo fijo mensual de $19.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 125 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
                     break;
 
 
@@ -830,33 +902,33 @@ if (document.getElementById("CedulaVigente").checked) {
 			switch(plan2){
 				  
                     case "10gigas":
-                         planDes2= "<br/>Y el <strong>“Plan WOM 10 Gigas”</strong> de un cargo fijo mensual de $7.990 incluye: 400 minutos, 50 mensajes de texto, Whatsapp ilimitado con llamadas y video llamadas para siempre, 10 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter por 1 año en 4G de WOM sin ningún costo adicional!. <br/><br/>";
+                         planDes2= "<br/>Y el <strong>Plan WOM 10 Gigas</strong> de un cargo fijo mensual de $7.990 incluye: 400 minutos, 50 mensajes de texto, Whatsapp ilimitado con llamadas y video llamadas para siempre, 10 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter por 1 año en 4G de WOM sin ningún costo adicional!. <br/><br/>";
                     break;
 
 
 
-                  case "20gigas":
-					     planDes2= "<br/>Y el <strong>“Plan WOMERS 20 Gigas”</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 20 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+                  case "25gigas":
+					     planDes2= "<br/>Y el <strong>Plan WOMERS 25 Gigas</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red+ Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando.. <br/><br/>";
 					break;
 
 
-				  case "40gigas":
-                        planDes2 = "<br/>Y el <strong>Plan WOMERS 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+				  case "50gigas":
+                        planDes2 = "<br/>Y el <strong>Plan ACUMULA 50 GB</strong> POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 50 gigas de navegación  en cualquier red, Gigas libres por 1 año en red 4g, + redes sociales libres para que utilices en Facebook, Instagram, Twitter y Snapchat para siempre en 4G WOM sin ningún costo adicional!.Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!.<br/>-Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan.. <br/><br/>";
                     break;
 
                   
-                    case "ACUMULA60gigas":
-                         planDes2 = "<br/>Y el <strong>Plan ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                    case "ACUMULA75gigas":
+                         planDes2 = "<br/>Y el <strong>Plan ACUMULA 75 GB</strong> Para Planes ACUMULA 75 GB: POR $13.990. Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos) + Gigas libres por 2 años en nuestra Red 4G, sin ningún costo adicional!. ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!.<br/>-Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
                     break;
-
-                    case "ACUMULA80gigas":
-                         planDes2 = "<br/>Y el <strong>Plan ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar.<strong> ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
-
-                    break;
-
 
                     case "ACUMULA100gigas":
-                         planDes2 = "<br/>Y el <strong>plan ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong> y tiene el <strong>doble de gigas por 6 meses</strong>.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                         planDes2 = "<br/>Y el <strong>Plan ACUMULA 100 GB</strong> de un cargo fijo mensual de $16.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+
+                    break;
+
+
+                    case "ACUMULA125gigas":
+                         planDes2 = "<br/>Y el <strong>Plan ACUMULA 125 GB</strong> de un cargo fijo mensual de $19.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 125 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
                     break;
 
 				 
@@ -870,35 +942,35 @@ if (document.getElementById("CedulaVigente").checked) {
 			switch(plan1){
 
                     case "10gigas":
-                         planDescrip= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>“Plan WOM 10 Gigas”</strong> de un cargo fijo mensual de $7.990 incluye: 400 minutos, 50 mensajes de texto, Whatsapp ilimitado con llamadas y video llamadas para siempre, 10 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter por 1 año en 4G de WOM sin ningún costo adicional! <br/><br/>";
+                         planDescrip= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOM 10 Gigas</strong> de un cargo fijo mensual de $7.990 incluye: 400 minutos, 50 mensajes de texto, Whatsapp ilimitado con llamadas y video llamadas para siempre, 10 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter por 1 año en 4G de WOM sin ningún costo adicional!. <br/><br/>";
                         break;
 
-					  case "20gigas":
-						 planDescrip= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>“Plan WOMERS 20 Gigas”</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 20 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+					  case "25gigas":
+						 planDescrip= "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOMERS 25 Gigas</strong> de un cargo fijo mensual de $9.990 incluye: 1000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 25 gigas de navegación en cualquier red+ Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de WOM sin ningún costo adicional!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
 						break;
 					  
 
 
-                        case "40gigas":
-                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan WOMERS 40 GB</strong>: POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 40 gigas de navegación en cualquier red + Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter para siempre en 4G de Wom sin ningún costo adicional! Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!. <br>- Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando. <br/><br/>";
+                        case "50gigas":
+                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 50 GB</strong> POR $11.990 incluye: 2000 minutos, más 50 mensajes de textos (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, 50 gigas de navegación  en cualquier red, Gigas libres por 1 año en red 4g, + redes sociales libres para que utilices en Facebook, Instagram, Twitter y Snapchat para siempre en 4G WOM sin ningún costo adicional!.Y como siempre te queremos seguir beneficiando, los gigas que no uses se acumulan para el siguiente mes! Todo por $11.990!.<br/>-Si quedas sin minutos recuerda que puedes recargar y se te descontaremos $50 el minuto de este saldo y en caso de usar todos tus gigas puedes comprar bolsas de datos para que sigas navegando.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
 
                         break;
 
                       
-                      case "ACUMULA60gigas":
-                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 60 GB</strong>: POR $13.990 Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos), Whatsapp ilimitado con llamadas y video llamadas para siempre, Redes sociales libres para que utilices en Instagram, Snapchat, Facebook y Twitter + Gigas libres por 1 año en nuestra Red 4G, sin ningún costo adicional!. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                      case "ACUMULA75gigas":
+                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 75 GB</strong> Para Planes ACUMULA 75 GB: POR $13.990. Te damos minutos libres y mensajes de textos libres (no incluye mensajes para concursos) + Gigas libres por 2 años en nuestra Red 4G, sin ningún costo adicional!. ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!.<br/>-Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/>-Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/>-Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
                         break;
 
 
-                         case "ACUMULA80gigas":
-                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 80 GB</strong>: POR $16.990 Te permite llamar y enviar mensajes de textos libres (no incluye mensajes para concursos) + gigas libres en nuestra red 4G para que los utilices en las aplicaciones que quieras POR DOS AÑOS, Whatsapp ilimitado con llamadas y video llamadas para siempre. Cuando cumplas los dos años de la promoción tendrás 45 gigas para navegar. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los minutos y Mensajes libre son válidos para los primeros 300 contactos distintos (diferentes) dentro de un mismo período de facturación dentro de Chile, desde el contacto 301 en adelante se cobrará $50 el valor del minuto o SMS adicional, más info en Wom.cl/planes.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                         case "ACUMULA100gigas":
+                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 100 GB</strong> de un cargo fijo mensual de $16.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
 
                     break;
 
 
 
-                        case "ACUMULA100gigas":
-                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>plan ACUMULA 100 GB</strong>: POR $19.990 Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 100 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>.<br/> - Los gigas libres que te entregamos son los gigas de tu plan + 50 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
+                        case "ACUMULA125gigas":
+                         planDescrip = "<br/>Según la oferta acordada, aceptas nuestro plan con un NÚMERO NUEVO contratando el <strong>Plan ACUMULA 125 GB</strong> de un cargo fijo mensual de $19.990. Te permite llamar, enviar SMS y navegar libremente. Podrás navegar en todas las aplicaciones que tú quieras en red 4G, incluyendo contenido en HD. Para asegurar una mejor experiencia de navegación al consumir 125 gigas tu velocidad bajará a 32 kbps de carga y descarga por lo que sigues navegando. <strong>ADEMÁS, LOS GIGAS QUE NO USES SE ACUMULAN PARA EL SIGUIENTE MES!</strong>. <br/> - Los gigas libres que te entregamos son los gigas de tu plan + 75 gigas que podrás utilizar sin restricción en nuestra red 4g, que para garantizar una buena experiencia de navegación, una vez que consumas el total de los gigas que te señalamos dentro del mismo periodo de facturación, la velocidad de navegación bajará a 32 kbps de carga y descarga.<br/> - Tu plan tiene como beneficio adicional Whatsapp internacional para que lo uses en tus viajes con mensajes, llamadas y video llamadas sin cobros adicionales. Este beneficio lo debes activar antes de viajar a través de nuestra APP o al 103 donde te entregaran más info. y consultar por su cobertura en más de 50 países en wom.cl.<br/> - Los gigas que te sobren durante el mes en curso, se acumulan para el mes siguiente, estando disponibles hasta el término del próximo ciclo de facturación. Los gigas acumulados sólo serán los basales de tu plan. <br/><br/>";
                     break;
 
 
@@ -914,13 +986,13 @@ if (document.getElementById("CedulaVigente").checked) {
 
 // Retiro
 
-        // if(document.getElementById("Direccionretiro").checked==true) {
+         if(document.getElementById("Direccionretiro").checked==true) {
 
-        // retiro = " <br/>Lo ofertado será despachado a  <strong>"+sucursal+"</strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
+         retiro = " <br/>Lo ofertado será despachado a  <strong>"+RetRegion+", "+RetTienda+" , "+RetProvincia+" , "+RetComuna+" , "+RetDireccionTienda+" </strong>. Te enviaremos al correo electrónico un código QR personalizado que te permitirá realizar el retiro de tu producto en un casillero ubicado en esta sucursal que ya te señalé.<strong></br> Considera que:</strong><br/> - Tendrás un plazo de 3 días hábiles para retirar tu producto.<br/> - Si tú no puedes retirar, puedes entregar el código QR a un familiar o amigo cercano para que realice el retiro por ti.<br/> - El código es válido solo por una vez, por lo tanto, si lo entregas es bajo tu responsabilidad.<br/><br/>";
 
 
-        // }   
-        // else 
+         }   
+         else 
 
             if(document.getElementById("Recibeotro").checked==true) {
 			despacho = "El área de despacho se contactará contigo en 48 horas hábiles para coordinar la entrega de la SIMCARD. Éstas comienzan una vez terminado el proceso interno de validación de la venta. Tus servicio será despachado a la dirección, <strong>calle: "+DireccionDespacho+" número: #"+ numero+" comuna: "+comuna+", "+region+", referencia: "+referencia+"</strong> , y tus números de contacto son: <strong>"+ NumeroContacto1+"</strong> y <strong>"+NumeroContacto2+"</strong>. Y quien recibe el despacho será: <strong>"+receptor+", rut: "+RutReceptor+" y teléfono: "+TelReceptor+"</strong>.<br/><br/>";
@@ -934,7 +1006,7 @@ if (document.getElementById("CedulaVigente").checked) {
 
 		var finVenta2 ="<br/>Además, enviarás al <strong>Whatsapp corporativo +56935788140</strong> la foto legible de tu Cédula de Identidad para proseguir con tu venta. Una vez aprobada la documentación, te contactaremos para coordinar la entrega. Te recuerdo que al terminar la llamada debes enviar inmediatamente tu carnet de identidad al whatsapp que te indique. Considerar que sin este documento, tu contratación no se realizará.<br> Una vez aprobada la documentación (en caso de aplicar) y generado el pago del Costo de activación te contactaremos para coordinar la entrega...<br/>";
 
-        var finVenta3 ="<br/><strong>Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aprov eche todos nuestros beneficios.<br/> En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!.<br/><br/><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/><br/> "
+        var finVenta3 ="<br/><strong>Y cómo TU LADO WOM LO DA TODO</strong> adicional al chip de tu plan, recibirás GRATIS un chip prepago para que lo regales a algún familiar o amigo, que con la primera recarga que se realice, se activará automáticamente 2 Gigas y 100 minutos para que aproveche todos nuestros beneficios.<br/> En WOM nos gustaría conocer tu opinión sobre tu experiencia en el proceso de tu venta. Cuando este activo tu plan recibirás en tu correo una encuesta para evaluarnos, por lo que te invito a responder!.<br/><br/><strong>ENTONCES, ¿ENTIENDES Y ACEPTAS LAS CONDICIONES DE ESTE CONTRATO?</strong><br/><br/> "
 
 // Mensaje final
 
